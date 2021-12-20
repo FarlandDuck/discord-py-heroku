@@ -6,6 +6,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
+#beans
 gift = 0xFCEEC2
 big = 0x1B4C84
 mega = 0xFFD046
