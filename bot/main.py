@@ -6,7 +6,6 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
-#beans2
 gift = 0xFCEEC2
 big = 0x1B4C84
 mega = 0xFFD046
@@ -41,7 +40,14 @@ async def on_message(message):
         await message.channel.send("Use !open [gift/big/mega]")
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
         words = message.content.lower().split()
-        if len(words) > 1:
+        singularCheck = False
+        if len(words) == 2:
+            singularCheck = True
+        else:
+            if len(words) > 2:
+                if words[2] == "1":
+                    singularCheck = True
+        if singularCheck:
             if 'gift' in words[1]:
                 embeded = discord.Embed(title="**Gift Container**",color=gift)
                 roll = random.random()
@@ -164,6 +170,250 @@ async def on_message(message):
                 await message.channel.send(embed=embeded)
             else:
                 await message.channel.send("Invalid crate type") 
+        elif len(words) > 2 and words[2].isalnum():
+            crates = int(words[2])
+            if crates <= 1000 and crates > 1:
+                embeded = None
+                validrequest = True
+                doubsAcc = 0
+                coalAcc = 0
+                steelAcc = 0
+                premAcc = 0
+                econsigsAcc = [0, 0, 0, 0]
+                specialsigsAcc = [0, 0, 0, 0, 0, 0, 0, 0]
+                camosAcc = [0, 0, 0, 0, 0]
+                nysAcc = 0
+                specialcamosAcc = [0, 0, 0]
+                shipsAcc = []
+                lastship = -1
+                if 'gift' in words[1]:
+                    embeded = discord.Embed(title= "**" + str(crates) + " Gift Containers**",color=gift)
+                    for i in range(crates):
+                        roll = random.random()
+                        if roll <= 0.025 or i - lastship - 1 == 99: #Ship
+                            lastship = i
+                            if len(shipsAcc) == 134:
+                                steelAcc += 250
+                            else:
+                                shipname = ""
+                                subroll = int(random.random() * 25)
+                                if subroll <= 19: #Low Ship
+                                    shipname = lowships[int(random.random() * len(lowships))]
+                                elif subroll <= 23: #Mid Ship
+                                    shipname = midships[int(random.random() * len(midships))]
+                                elif subroll <= 24: #Rare Ship
+                                    shipname = rareships[int(random.random() * len(rareships))]
+                                while shipname in shipsAcc:
+                                    subroll = int(random.random() * 25)
+                                    if subroll <= 19: #Low Ship
+                                        shipname = lowships[int(random.random() * len(lowships))]
+                                    elif subroll <= 23: #Mid Ship
+                                        shipname = midships[int(random.random() * len(midships))]
+                                    elif subroll <= 24: #Rare Ship
+                                        shipname = rareships[int(random.random() * len(rareships))]
+                                shipsAcc.append(shipname)
+                        elif roll <= 0.075: #500 Doubloons
+                            doubsAcc += 500
+                        elif roll <= 0.085: #30 Days Premium
+                            premAcc += 30
+                        elif roll <= 0.2: #4 New Year Sky Camos
+                            nysAcc += 4
+                        elif roll <= 0.6: #50 Economic Signals
+                            subroll = int(random.random() * 4)
+                            econsigsAcc[subroll] += 50
+                        elif roll <= 0.85: #4 Frosty Fir Tree Camos, 4 New Year Streamer Camos, 4 Winter Strands Camos, 5 New Year Camos, or 5 Type 3 - New Year Camos
+                            subroll = int(random.random() * 5)
+                            if subroll <= 2:
+                                camosAcc[subroll] += 4
+                            else:
+                                camosAcc[subroll] += 5
+                        elif roll <= 0.92: #2500 Coal
+                            coalAcc += 2500
+                        elif roll <= 1: #5 Special Signals
+                            subroll = int(random.random() * 8)
+                            specialsigsAcc[subroll] += 5
+                elif 'big' in words[1]:
+                    embeded = discord.Embed(title= "**" + str(crates) + " Big Gift Containers**",color=big)
+                    for i in range(crates):
+                        shipname = ""
+                        roll = random.random()
+                        if roll <= 0.09 or i - lastship - 1 == 26: #Ship
+                            lastship = i
+                            if len(shipsAcc) == 134:
+                                steelAcc += 750
+                            else:
+                                shipname = ""
+                                subroll = int(random.random() * 18)
+                                if subroll <= 13: #Low Ship
+                                    shipname = lowships[int(random.random() * len(lowships))]
+                                elif subroll <= 16: #Mid Ship
+                                    shipname = midships[int(random.random() * len(midships))]
+                                elif subroll <= 17: #Rare Ship
+                                    shipname = rareships[int(random.random() * len(rareships))]
+                                while shipname in shipsAcc:
+                                    subroll = int(random.random() * 25)
+                                    if subroll <= 13: #Low Ship
+                                        shipname = lowships[int(random.random() * len(lowships))]
+                                    elif subroll <= 16: #Mid Ship
+                                        shipname = midships[int(random.random() * len(midships))]
+                                    elif subroll <= 17: #Rare Ship
+                                        shipname = rareships[int(random.random() * len(rareships))]
+                            shipsAcc.append(shipname)
+                        elif roll <= 0.14: #1500 Doubloons
+                            doubsAcc += 1500
+                        elif roll <= 0.15: #90 Days Premium
+                            premAcc += 90
+                        elif roll <= 0.31: #12 New Year Sky Camos
+                            nysAcc += 12
+                        elif roll <= 0.61: #12 Frosty Fir Tree Camos, 12 New Year Streamer Camos, 12 Winter Strands Camos, 15 New Year Camos, or 15 Type 3 - New Year Camos
+                            subroll = int(random.random() * 5)
+                            if subroll <= 2:
+                                camosAcc[subroll] += 12
+                            else:
+                                camosAcc[subroll] += 15
+                        elif roll <= 0.68: #7500 Coal
+                            coalAcc += 7500
+                        elif roll <= 1: #15 Special Signals
+                            subroll = int(random.random() * 8)
+                            specialsigsAcc[subroll] += 15
+                elif 'mega' in words[1]:
+                    embeded = discord.Embed(title= "**" + str(crates) + " Mega Gift Containers**",color=mega)
+                    for i in range(crates):
+                        roll = random.random()
+                        if roll <= 0.16 or i - lastship - 1 == 14: #Ship
+                            lastship = i
+                            if len(shipsAcc) == 134:
+                                steelAcc += 250
+                            else:
+                                shipname = ""
+                                subroll = int(random.random() * 16)
+                                if subroll <= 11: #Low Ship
+                                    shipname = lowships[int(random.random() * len(lowships))]
+                                elif subroll <= 14: #Mid Ship
+                                    shipname = midships[int(random.random() * len(midships))]
+                                elif subroll <= 15: #Rare Ship
+                                    shipname = rareships[int(random.random() * len(rareships))]
+                                while shipname in shipsAcc:
+                                    subroll = int(random.random() * 25)
+                                    if subroll <= 11: #Low Ship
+                                        shipname = lowships[int(random.random() * len(lowships))]
+                                    elif subroll <= 14: #Mid Ship
+                                        shipname = midships[int(random.random() * len(midships))]
+                                    elif subroll <= 15: #Rare Ship
+                                        shipname = rareships[int(random.random() * len(rareships))]
+                                shipsAcc.append(shipname)
+                        elif roll <= 0.21: #2500 Doubloons
+                            doubsAcc += 2500
+                        elif roll <= 0.22: #180 Days Premium
+                            premAcc += 180
+                        elif roll <= 0.32: #20 New Year Sky Camos
+                            nysAcc += 20
+                        elif roll <= 0.35: #20 Frosty Fir Tree Camos, 20 New Year Streamer Camos, 20 Winter Strands Camos, or 25 Type 3 - New Year Camos
+                            subroll = int(random.random() * 4)
+                            if subroll <= 2:
+                                camosAcc[subroll] += 20
+                            else:
+                                camosAcc[4] += 25
+                        elif roll <= 0.42: #12500 Coal
+                            coalAcc += 12500
+                        elif roll <= 0.82: #30 Special Signals
+                            subroll = int(random.random() * 8)
+                            specialsigsAcc[subroll] += 30
+                        elif roll <= 0.85: #25 New Year Camos
+                            camosAcc[3] += 25
+                        elif roll <= 1: #5 Spring Sky, Asian Lantern, or Mosaic
+                            subroll = int(random.random() * 3)
+                            specialcamosAcc[subroll] += 5
+                else:
+                    validrequest = False
+                    await message.channel.send("Invalid crate type") 
+                if validrequest:
+                    if len(shipsAcc) > 0:
+                        shipsAcc.sort()
+                        lowshipstring = ""
+                        lowshipscount = 0
+                        midshipstring = ""
+                        midshipscount = 0
+                        rareshipstring = ""
+                        rareshipscount = 0
+                        for i in shipsAcc:
+                            if i in lowships:
+                                if len(lowshipstring) == 0:
+                                    lowshipstring = i
+                                else:
+                                    lowshipstring += ", " + i
+                                lowshipscount += 1
+                            elif i in midships:
+                                if len(midshipstring) == 0:
+                                    midshipstring = i
+                                else:
+                                    midshipstring += ", " + i
+                                midshipscount += 1
+                            elif i in rareships:
+                                if len(rareshipstring) == 0:
+                                    rareshipstring = i
+                                else:
+                                    rareshipstring += ", " + i
+                                rareshipscount += 1
+                        if len(lowshipstring) > 2:
+                            embeded.add_field(name="**Rare and Tier X Ships** (" + str(rareshipscount) + ")", value=rareshipstring, inline=False)
+                        if len(midshipstring) > 1:
+                            embeded.add_field(name="**Tier VIII and IX Ships** (" + str(midshipscount) + ")", value=midshipstring, inline=False)
+                        if len(lowshipstring) > 0:
+                            embeded.add_field(name="**Tier V-VII Ships** (" + str(lowshipscount) + ")", value=lowshipstring, inline=False)
+                    if doubsAcc > 0:
+                        embeded.add_field(name="**Doubloons**", value=str(doubsAcc), inline=False)
+                    if premAcc > 0:
+                        embeded.add_field(name="**Days of Premium**", value=str(premAcc), inline=False)
+                    if coalAcc > 0:
+                        embeded.add_field(name="**Coal**", value=str(coalAcc), inline=False)
+                    if steelAcc > 0:
+                        embeded.add_field(name="**Steel**", value=str(steelAcc), inline=False)
+                    if camosAcc[0] > 0:
+                        embeded.add_field(name="**Frosty Fir Tree Camos**", value=str(camosAcc[0]), inline=False)
+                    if camosAcc[1] > 0:
+                        embeded.add_field(name="**New Year Streamer Camos**", value=str(camosAcc[1]), inline=False)
+                    if camosAcc[2] > 0:
+                        embeded.add_field(name="**Winter Strands Camos**", value=str(camosAcc[2]), inline=False)
+                    if camosAcc[3] > 0:
+                        embeded.add_field(name="**New Year Camos**", value=str(camosAcc[3]), inline=False)
+                    if camosAcc[4] > 0:
+                        embeded.add_field(name="**Type 3 - New Year Camos**", value=str(camosAcc[4]), inline=False)
+                    if nysAcc > 0:
+                        embeded.add_field(name="**New Year Sky Camos**", value=str(nysAcc), inline=False)
+                    if specialcamosAcc[0] > 0:
+                        embeded.add_field(name="**Spring Sky Camos**", value=str(specialcamosAcc[0]), inline=False)
+                    if specialcamosAcc[1] > 0:
+                        embeded.add_field(name="**Asian Lantern Camos**", value=str(specialcamosAcc[1]), inline=False)
+                    if specialcamosAcc[2] > 0:
+                        embeded.add_field(name="**Mosaic Camos**", value=str(specialcamosAcc[2]), inline=False)
+                    if econsigsAcc[0] > 0:
+                        embeded.add_field(name="**Zulu Signals**", value=str(econsigsAcc[0]), inline=False)
+                    if econsigsAcc[1] > 0:
+                        embeded.add_field(name="**Equal Speed Charlie London Signals**", value=str(econsigsAcc[1]), inline=False)
+                    if econsigsAcc[2] > 0:
+                        embeded.add_field(name="**Zulu Hotel Signals**", value=str(econsigsAcc[2]), inline=False)
+                    if econsigsAcc[3] > 0:
+                        embeded.add_field(name="**Papa Papa Signals**", value=str(econsigsAcc[3]), inline=False)
+                    if specialsigsAcc[0] > 0:
+                        embeded.add_field(name="**Wyvern Signals**", value=str(specialsigsAcc[0]), inline=False)
+                    if specialsigsAcc[1] > 0:
+                        embeded.add_field(name="**Red Dragon Signals**", value=str(specialsigsAcc[1]), inline=False)
+                    if specialsigsAcc[2] > 0:
+                        embeded.add_field(name="**Dragon Signals**", value=str(specialsigsAcc[2]), inline=False)
+                    if specialsigsAcc[3] > 0:
+                        embeded.add_field(name="**Ouroboros Signals**", value=str(specialsigsAcc[3]), inline=False)
+                    if specialsigsAcc[4] > 0:
+                        embeded.add_field(name="**Scylla Signals**", value=str(specialsigsAcc[4]), inline=False)
+                    if specialsigsAcc[5] > 0:
+                        embeded.add_field(name="**Hydra Signals**", value=str(specialsigsAcc[5]), inline=False)
+                    if specialsigsAcc[6] > 0:
+                        embeded.add_field(name="**Basilisk Signals**", value=str(specialsigsAcc[6]), inline=False)
+                    if specialsigsAcc[7] > 0:
+                        embeded.add_field(name="**Leviathan Signals**", value=str(specialsigsAcc[7]), inline=False)
+                    await message.channel.send(embed=embeded)
+            else:
+                await message.channel.send("Please choose a number less than or equal to 1000")  
         else:
            await message.channel.send("Please specify the crate") 
 client.run(TOKEN)
