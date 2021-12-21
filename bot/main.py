@@ -355,9 +355,9 @@ async def on_message(message):
                                 else:
                                     rareshipstring += ", " + i
                                 rareshipscount += 1
-                        if len(lowshipstring) > 2:
+                        if len(rareshipstring) > 0:
                             embeded.add_field(name="**Rare and Tier X Ships** (" + str(rareshipscount) + ")", value=rareshipstring, inline=False)
-                        if len(midshipstring) > 1:
+                        if len(midshipstring) > 0:
                             embeded.add_field(name="**Tier VIII and IX Ships** (" + str(midshipscount) + ")", value=midshipstring, inline=False)
                         if len(lowshipstring) > 0:
                             embeded.add_field(name="**Tier V-VII Ships** (" + str(lowshipscount) + ")", value=lowshipstring, inline=False)
