@@ -65,13 +65,13 @@ async def on_message(message):
                     dupes = d
                     empties = n - k
                     while(empties != 0):
+                        containers += 1
                         index = int(n * random.random())
                         if collection[index] == 1:
                             dupes += 1
                         else:
-                            collection[int(n * random.random())] = 1
+                            collection[index] = 1
                             empties -= 1
-                        containers += 1
                         if dupes / c >= empties:
                             break
                     totalcontainers += containers
