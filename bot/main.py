@@ -1,4 +1,3 @@
-from msvcrt import kbhit
 import os
 import discord
 import random
@@ -37,41 +36,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if '!collection'.lower() in message.content.lower() and message.content[0] == "!":
-        content = message.content.split(" ")
-        if len(content) == 5 and content[1].isdigit() and content[2].isdigit() and content[3].isdigit() and content[4].isdigit():
-            # runs = 100000
-            # n = int(content[1])
-            # k = int(content[2])
-            # d = int(content[3])
-            # c = int(content[4])
-            # totalcontainers = 0
-            # array = []
-            # for i in range(runs):
-            #     collection = (n - k) * [-1] + (k) * [1]
-            #     containers = 0
-            #     dupes = d
-            #     empties = n - k
-            #     while(empties != 0):
-            #         index = int(n * random.random())
-            #         if collection[index] == 1:
-            #             dupes += 1
-            #         else:
-            #             collection[int(n * random.random())] = 1
-            #             empties -= 1
-            #         containers += 1
-            #         if dupes / c >= empties:
-            #             break
-            #     totalcontainers += containers
-            #     array.append(containers)
-            # array.sort()
-            # collectionmessage = "0.15 percentile: \t" + str(array[int(0.0015 * runs)]) + "\n2.5 percentile: \t" + str(array[int(0.025 * runs)]) + "\n16 percentile: \t\t" + str(array[int(0.16 * runs)]) + "\nAverage: \t\t" + str(totalcontainers / runs) + "\n84 percentile: \t\t" + str(array[int(0.84 * runs)]) + "\n97.5 percentile: \t" + str(array[int(0.975 * runs)]) + "\n99.85 percentile: \t" + str(array[int(0.9985 * runs)])
-            # await message.channel.send(collectionmessage)
-            await message.channel.send("alg")
-        else:
-            await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
     if '!help'.lower() in message.content.lower() and message.content[0] == "!":
-        await message.channel.send("Use !open [gift/big/mega]")
+        await message.channel.send("Use !open [gift/big/mega] [number of containers (optional)]. Always assumes no ships are currently owned and will only account for duplicates and pity successes when opening more than one container at once.")
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
         words = message.content.lower().split()
         singularCheck = False
@@ -415,39 +381,3 @@ async def on_message(message):
                         embeded.add_field(name="**Type 3 - New Year Camos**", value=str(camosAcc[4]), inline=False)
                     if nysAcc > 0:
                         embeded.add_field(name="**New Year Sky Camos**", value=str(nysAcc), inline=False)
-                    if specialcamosAcc[0] > 0:
-                        embeded.add_field(name="**Spring Sky Camos**", value=str(specialcamosAcc[0]), inline=False)
-                    if specialcamosAcc[1] > 0:
-                        embeded.add_field(name="**Asian Lantern Camos**", value=str(specialcamosAcc[1]), inline=False)
-                    if specialcamosAcc[2] > 0:
-                        embeded.add_field(name="**Mosaic Camos**", value=str(specialcamosAcc[2]), inline=False)
-                    if econsigsAcc[0] > 0:
-                        embeded.add_field(name="**Zulu Signals**", value=str(econsigsAcc[0]), inline=False)
-                    if econsigsAcc[1] > 0:
-                        embeded.add_field(name="**Equal Speed Charlie London Signals**", value=str(econsigsAcc[1]), inline=False)
-                    if econsigsAcc[2] > 0:
-                        embeded.add_field(name="**Zulu Hotel Signals**", value=str(econsigsAcc[2]), inline=False)
-                    if econsigsAcc[3] > 0:
-                        embeded.add_field(name="**Papa Papa Signals**", value=str(econsigsAcc[3]), inline=False)
-                    if specialsigsAcc[0] > 0:
-                        embeded.add_field(name="**Wyvern Signals**", value=str(specialsigsAcc[0]), inline=False)
-                    if specialsigsAcc[1] > 0:
-                        embeded.add_field(name="**Red Dragon Signals**", value=str(specialsigsAcc[1]), inline=False)
-                    if specialsigsAcc[2] > 0:
-                        embeded.add_field(name="**Dragon Signals**", value=str(specialsigsAcc[2]), inline=False)
-                    if specialsigsAcc[3] > 0:
-                        embeded.add_field(name="**Ouroboros Signals**", value=str(specialsigsAcc[3]), inline=False)
-                    if specialsigsAcc[4] > 0:
-                        embeded.add_field(name="**Scylla Signals**", value=str(specialsigsAcc[4]), inline=False)
-                    if specialsigsAcc[5] > 0:
-                        embeded.add_field(name="**Hydra Signals**", value=str(specialsigsAcc[5]), inline=False)
-                    if specialsigsAcc[6] > 0:
-                        embeded.add_field(name="**Basilisk Signals**", value=str(specialsigsAcc[6]), inline=False)
-                    if specialsigsAcc[7] > 0:
-                        embeded.add_field(name="**Leviathan Signals**", value=str(specialsigsAcc[7]), inline=False)
-                    await message.channel.send(embed=embeded)
-            else:
-                await message.channel.send("Please choose a number less than or equal to 1000")  
-        else:
-           await message.channel.send("Please specify the crate") 
-client.run(TOKEN)
