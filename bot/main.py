@@ -61,19 +61,19 @@ async def on_message(message):
                 array = []
                 for i in range(runs):
                     collection = (n - k) * [-1] + (k) * [1]
-                containers = 0
-                dupes = d
-                empties = n - k
-                while(empties != 0):
-                    containers += 1
-                    index = int(n * random.random())
-                    if collection[index] == 1:
-                        dupes += 1
-                    else:
-                        collection[index] = 1
-                        empties -= 1
-                    if dupes / c >= empties:
-                        break
+                    containers = 0
+                    dupes = d
+                    empties = n - k
+                    while(empties != 0):
+                        containers += 1
+                        index = int(n * random.random())
+                        if collection[index] == 1:
+                            dupes += 1
+                        else:
+                            collection[index] = 1
+                            empties -= 1
+                        if dupes / c >= empties:
+                            break
                     totalcontainers += containers
                     array.append(containers)
                 array.sort(reverse=True)
