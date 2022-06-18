@@ -381,3 +381,4 @@ async def on_message(message):
                         embeded.add_field(name="**Type 3 - New Year Camos**", value=str(camosAcc[4]), inline=False)
                     if nysAcc > 0:
                         embeded.add_field(name="**New Year Sky Camos**", value=str(nysAcc), inline=False)
+client.run(TOKEN)
