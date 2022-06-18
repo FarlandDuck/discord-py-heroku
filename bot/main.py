@@ -74,10 +74,9 @@ async def on_message(message):
                         empties -= 1
                     if dupes / c >= empties:
                         break
-                totalcontainers += containers
-                array.append(containers)
+                    totalcontainers += containers
+                    array.append(containers)
                 array.sort(reverse=True)
-                await message.channel.send(len(array))
                 collectionmessage = "```"
                 collectionmessage += "\nOn Average, you will need to open " + str(totalcontainers / runs) + " containers."
                 collectionmessage += "\nYou can reasonably expect to open between " + str(array[int(0.9985 * runs)]) + " and " + str(array[int(0.0015 * runs)]) + " containers to complete the collection."
