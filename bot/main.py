@@ -78,7 +78,7 @@ async def on_message(message):
                     array.append(containers)
                 array.sort(reverse=True)
                 collectionmessage = "```"
-                collectionmessage += "\nOn Average, you will need to open " + str(totalcontainers / runs) + " containers."
+                collectionmessage += "\nOn average, you will need to open " + str(totalcontainers / runs) + " containers."
                 collectionmessage += "\nYou can reasonably expect to open between " + str(array[int(0.9985 * runs)]) + " and " + str(array[int(0.0015 * runs)]) + " containers to complete the collection."
                 collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
                 collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
