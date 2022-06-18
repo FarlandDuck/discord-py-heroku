@@ -65,13 +65,13 @@ async def on_message(message):
                 array.append(containers)
             array.sort()
             collectionmessage = "```Number of containers opened until collection is completed"
-            collectionmessage += "At 0.15 percentile: \t" + str(array[int(0.0015 * runs)])
-            collectionmessage += "\nAt 2.5 percentile: \t" + str(array[int(0.025 * runs)])
-            collectionmessage += "\nAt 16 percentile: \t\t" + str(array[int(0.16 * runs)])
-            collectionmessage += "\nOn Average: \t\t" + str(totalcontainers / runs)
-            collectionmessage += "\nAt 84 percentile: \t\t" + str(array[int(0.84 * runs)])
-            collectionmessage += "\nAt 97.5 percentile: \t" + str(array[int(0.975 * runs)])
-            collectionmessage += "\nAt 99.85 percentile: \t" + str(array[int(0.9985 * runs)]) + "```"
+            collectionmessage += "\nAt 0.15 percentile:\t" + str(array[int(0.0015 * runs)])
+            collectionmessage += "\nAt 2.5 percentile:\t" + str(array[int(0.025 * runs)])
+            collectionmessage += "\nAt 16 percentile:\t" + str(array[int(0.16 * runs)])
+            collectionmessage += "\nOn Average:\t\t" + str(totalcontainers / runs)
+            collectionmessage += "\nAt 84 percentile:\t\t" + str(array[int(0.84 * runs)])
+            collectionmessage += "\nAt 97.5 percentile:\t" + str(array[int(0.975 * runs)])
+            collectionmessage += "\nAt 99.85 percentile:\t" + str(array[int(0.9985 * runs)]) + "```"
             await message.channel.send(collectionmessage)
         else:
             await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
