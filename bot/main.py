@@ -44,35 +44,48 @@ async def on_message(message):
             k = int(content[2])
             d = int(content[3])
             c = int(content[4])
-            totalcontainers = 0
-            array = []
-            for i in range(runs):
-                collection = (n - k) * [-1] + (k) * [1]
-                containers = 0
-                dupes = d
-                empties = n - k
-                while(empties != 0):
-                    index = int(n * random.random())
-                    if collection[index] == 1:
-                        dupes += 1
-                    else:
-                        collection[int(n * random.random())] = 1
-                        empties -= 1
-                    containers += 1
-                    if dupes / c >= empties:
-                        break
-                totalcontainers += containers
-                array.append(containers)
-            array.sort()
-            collectionmessage = "```Number of containers need to open until collection is completed:"
-            collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
-            collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
-            collectionmessage += "\nAt 16 percentile:    " + str(array[int(0.16 * runs)])
-            collectionmessage += "\nOn Average:          " + str(totalcontainers / runs)
-            collectionmessage += "\nAt 84 percentile:    " + str(array[int(0.84 * runs)])
-            collectionmessage += "\nAt 97.5 percentile:  " + str(array[int(0.975 * runs)])
-            collectionmessage += "\nAt 99.85 percentile: " + str(array[int(0.9985 * runs)]) + "```"
-            await message.channel.send(collectionmessage)
+            if n > 100:
+                await message.channel.send("There can not be more than 100 items in a collection.")
+            elif n <= 0:
+                await message.channel.send("There must be at least one item in a collection.")
+            elif k > n:
+                await message.channel.send("There can not be more items currently owned than there are total items in a collection.")
+            elif k < 0:
+                await message.channel.send("There can not be less than 0 items owned.")
+            elif d < 0:
+                await message.channel.send("There can not be less than 0 duplicates owned.")
+            elif c <= 0:
+                await message.channel.send("The conversion cost of duplicates to an item must be 1 or higher.")
+            else:
+                totalcontainers = 0
+                array = []
+                for i in range(runs):
+                    collection = (n - k) * [-1] + (k) * [1]
+                    containers = 0
+                    dupes = d
+                    empties = n - k
+                    while(empties != 0):
+                        index = int(n * random.random())
+                        if collection[index] == 1:
+                            dupes += 1
+                        else:
+                            collection[int(n * random.random())] = 1
+                            empties -= 1
+                        containers += 1
+                        if dupes / c >= empties:
+                            break
+                    totalcontainers += containers
+                    array.append(containers)
+                array.sort()
+                collectionmessage = "```Number of containers need to open until collection is completed:"
+                collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
+                collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
+                collectionmessage += "\nAt 16 percentile:    " + str(array[int(0.16 * runs)])
+                collectionmessage += "\nOn Average:          " + str(totalcontainers / runs)
+                collectionmessage += "\nAt 84 percentile:    " + str(array[int(0.84 * runs)])
+                collectionmessage += "\nAt 97.5 percentile:  " + str(array[int(0.975 * runs)])
+                collectionmessage += "\nAt 99.85 percentile: " + str(array[int(0.9985 * runs)]) + "```"
+                await message.channel.send(collectionmessage)
         else:
             await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
     if '!help'.lower() in message.content.lower() and message.content[0] == "!":
