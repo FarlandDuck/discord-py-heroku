@@ -76,7 +76,7 @@ async def on_message(message):
                             break
                     totalcontainers += containers
                     array.append(containers)
-                array.sort()
+                array.sort(reverse=True)
                 collectionmessage = "```Number of containers need to open until collection is completed:"
                 collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
                 collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
