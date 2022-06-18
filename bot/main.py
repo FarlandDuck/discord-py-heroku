@@ -36,6 +36,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    if '!collection'.lower() in message.content.lower() and message.content[0] == "!":
+        await message.channel.send("test test")
     if '!help'.lower() in message.content.lower() and message.content[0] == "!":
         await message.channel.send("Use !open [gift/big/mega] [number of containers (optional)]. Always assumes no ships are currently owned and will only account for duplicates and pity successes when opening more than one container at once.")
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
