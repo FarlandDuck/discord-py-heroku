@@ -1,3 +1,4 @@
+from msvcrt import kbhit
 import os
 import discord
 import random
@@ -38,7 +39,36 @@ async def on_message(message):
         return
     if '!collection'.lower() in message.content.lower() and message.content[0] == "!":
         content = message.content.split(" ")
-        await message.channel.send(content)
+        if len(content) == 5 and content[1].isdigit() and content[2].isdigit() and content[3].isdigit() and content[4].isdigit():
+            runs = 100000
+            n = int(content[1])
+            k = int(content[2])
+            d = int(content[3])
+            c = int(content[4])
+            totalcontainers = 0
+            array = []
+            for i in range(runs):
+                collection = (n - k) * [-1] + (k) * [1]
+                containers = 0
+                dupes = d
+                empties = n - k
+                while(empties != 0):
+                    index = int(n * random.random())
+                    if collection[index] == 1:
+                        dupes += 1
+                    else:
+                        collection[int(n * random.random())] = 1
+                        empties -= 1
+                    containers += 1
+                    if dupes / c >= empties:
+                        break
+                totalcontainers += containers
+                array.append(containers)
+            array.sort()
+            collectionmessage = "0.15 percentile: \t" + str(array[int(0.0015 * runs)]) + "\n2.5 percentile: \t" + str(array[int(0.025 * runs)]) + "\n16 percentile: \t\t" + str(array[int(0.16 * runs)]) + "\nAverage: \t\t" + str(totalcontainers / runs) + "\n84 percentile: \t\t" + str(array[int(0.84 * runs)]) + "\n97.5 percentile: \t" + str(array[int(0.975 * runs)]) + "\n99.85 percentile: \t" + str(array[int(0.9985 * runs)])
+            await message.channel.send(collectionmessage)
+        else:
+            await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
     if '!help'.lower() in message.content.lower() and message.content[0] == "!":
         await message.channel.send("Use !open [gift/big/mega] [number of containers (optional)]. Always assumes no ships are currently owned and will only account for duplicates and pity successes when opening more than one container at once.")
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
