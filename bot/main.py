@@ -61,27 +61,28 @@ async def on_message(message):
                 array = []
                 for i in range(runs):
                     collection = (n - k) * [-1] + (k) * [1]
-                    containers = 0
-                    dupes = d
-                    empties = n - k
-                    while(empties != 0):
-                        containers += 1
-                        index = int(n * random.random())
-                        if collection[index] == 1:
-                            dupes += 1
-                        else:
-                            collection[index] = 1
-                            empties -= 1
-                        if dupes / c >= empties:
-                            break
-                    totalcontainers += containers
-                    array.append(containers)
+                containers = 0
+                dupes = d
+                empties = n - k
+                while(empties != 0):
+                    containers += 1
+                    index = int(n * random.random())
+                    if collection[index] == 1:
+                        dupes += 1
+                    else:
+                        collection[index] = 1
+                        empties -= 1
+                    if dupes / c >= empties:
+                        break
+                totalcontainers += containers
+                array.append(containers)
                 array.sort(reverse=True)
-                collectionmessage = "```Number of containers need to open until collection is completed:"
-                collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
+                collectionmessage = "```"
+                collectionmessage += "\nOn Average, you will need to open " + str(totalcontainers / runs) + " containers. You can reasonably expect to open between " + str(array[int(0.9985 * runs)]) + " and " + str(array[int(0.0015 * runs)]) + " containers to complete the collection."
+                collectionmessage += "\\nnAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
                 collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
                 collectionmessage += "\nAt 16 percentile:    " + str(array[int(0.16 * runs)])
-                collectionmessage += "\nOn Average:          " + str(totalcontainers / runs)
+                collectionmessage += "\nAt the median:       " + str(array[int(0.5 * runs)])
                 collectionmessage += "\nAt 84 percentile:    " + str(array[int(0.84 * runs)])
                 collectionmessage += "\nAt 97.5 percentile:  " + str(array[int(0.975 * runs)])
                 collectionmessage += "\nAt 99.85 percentile: " + str(array[int(0.9985 * runs)]) + "```"
