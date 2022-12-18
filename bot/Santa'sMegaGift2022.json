@@ -1,0 +1,107 @@
+{
+  "name": "Santa's Mega Gift",
+  "color": "0xB32D1E",
+  "drops": [
+    {
+      "name": "Premium Ship",
+      "rate": 16,
+      "drops": [
+        {
+          "name": "Tier V-VII Ship",
+          "rate": 75,
+          "group": [
+            
+          ]
+        },
+        {
+          "name": "Tier VIII-IX Ship",
+          "rate": 18.75,
+          "group": [
+            
+          ]
+        },
+        {
+          "name": "Tier X Ship or a Rare Ship",
+          "rate": 6.25,
+          "group": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "180 Days of Warships Premium Account",
+      "rate": 1,
+      "link": ""
+    },
+    {
+      "name": "Red Bonus",
+      "rate": 8,
+      "group": [
+        {
+          "name": "Credits +320%",
+          "link": ""
+        },
+        {
+          "name": "Ship XP +1,600%",
+          "link": ""
+        },
+        {
+          "name": "Commander XP +1,600%",
+          "link": ""
+        },
+        {
+          "name": "Free XP +7,200%",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "2,500 Doubloons",
+      "rate": 5,
+      "link": ""
+    },
+    {
+      "name": "25 New Year Sky Camouflages",
+      "rate": 5,
+      "link": ""
+    },
+    {
+      "name": "12,500 Coal",
+      "rate": 7,
+      "link": ""
+    },
+    {
+      "name": "Blue Bonus",
+      "rate": 38,
+      "group": [
+        {
+          "name": "Credits +160%",
+          "link": ""
+        },
+        {
+          "name": "Ship XP +800%",
+          "link": ""
+        },
+        {
+          "name": "Commander XP +800%",
+          "link": ""
+        },
+        {
+          "name": "Free XP +2,400%",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "100,000 Elite Commander XP",
+      "rate": 10,
+      "link": ""
+    },
+    {
+      "name": "2,250,000 Credits",
+      "rate": 10,
+      "link": ""
+    }
+  ]
+}
