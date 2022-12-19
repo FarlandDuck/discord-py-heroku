@@ -1,15 +1,15 @@
 {
-  "name":"Santa's Mega Gift 2021 Container",
-  "nickname": "mega21",
-  "color":"0xFFD046",
+  "name":"Supercontainer",
+  "nickname": "super",
+  "color":"0xB95E51",
   "drops":[
     {
       "name":"Premium Ship",
-      "rate":16,
+      "rate":1.5,
       "drops":[
         {
           "name":"Tier V-VII Ship",
-          "rate":75,
+          "rate":83.3333333333,
           "drops":[
             {
               "name":"Admiral Makarov",
@@ -48,12 +48,20 @@
               "link":"https://media.discordapp.net/attachments/922286460068061194/922314821431590972/Boise.png"
             },
             {
+              "name":"Béarn",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054216327444840468/Bearn.png"
+            },
+            {
               "name":"Błyskawica",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922314821129605140/Byskawica.png"
             },
             {
               "name":"California",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922317417131147275/California.png"
+            },
+            {
+              "name":"Collingwood",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215851483607181/Collingwood.png"
             },
             {
               "name":"De Grasse",
@@ -78,6 +86,10 @@
             {
               "name":"Exeter",
               "link":"https://media.discordapp.net/attachments/922286460068061194/922317418506911853/Exeter.png"
+            },
+            {
+              "name":"FR25",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215870437675138/FR25.png"
             },
             {
               "name":"Florida",
@@ -108,6 +120,10 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922318086642741288/Huanghe.png"
             },
             {
+              "name":"Huron",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215877094023248/Huron.png"
+            },
+            {
               "name":"Hyūga",
               "link":"https://media.discordapp.net/attachments/922286460068061194/922318087028604968/Hyuga.png"
             },
@@ -122,6 +138,10 @@
             {
               "name":"Juruá",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922318088010080256/Jurua.png"
+            },
+            {
+              "name":"Karl von Schönberg",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215885755269170/Karl_von_Schonberg.png"
             },
             {
               "name":"Kirov",
@@ -156,6 +176,10 @@
               "link":"https://media.discordapp.net/attachments/922286460068061194/922318788840521778/MarbleheadLima.png"
             },
             {
+              "name":"Maya",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215892730380349/Maya.png"
+            },
+            {
               "name":"Mikoyan",
               "link":"https://media.discordapp.net/attachments/922286460068061194/922318789058650173/Mikoyan.png"
             },
@@ -184,6 +208,10 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922318789771685908/Munchen.png"
             },
             {
+              "name":"Novorossiysk",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215899625828432/Novorossiysk.png"
+            },
+            {
               "name":"Nueve de Julio",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319353913962576/NuevedeJulio.png"
             },
@@ -208,6 +236,14 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319355545542666/PrinzEitelFriedrich.png"
             },
             {
+              "name":"Repulse",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215940105056326/Repulse.png"
+            },
+            {
+              "name":"Rio de Janeiro",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215792255840266/Rio_de_Janeiro.png"
+            },
+            {
               "name":"Scharnhorst",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319355943997460/Scharnhorst.png"
             },
@@ -226,6 +262,10 @@
             {
               "name":"Texas",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319780579520532/Texas.png"
+            },
+            {
+              "name":"Toulon",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215952516005978/Toulon.png"
             },
             {
               "name":"Viribus Unitis",
@@ -259,7 +299,7 @@
         },
         {
           "name":"Tier VIII-IX Ship",
-          "rate":18.75,
+          "rate":13.3333333333,
           "drops":[
             {
               "name":"Ägir",
@@ -268,6 +308,14 @@
             {
               "name":"Alabama",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320626704863252/Alabama.png"
+            },
+            {
+              "name":"Anhalt",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219706820735026/Anhalt.png"
+            },
+            {
+              "name":"Aquila",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219651179094037/Aquila.png"
             },
             {
               "name":"Atago",
@@ -290,12 +338,24 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320625559826472/Borodino.png"
             },
             {
+              "name":"Brandenburg",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219645638414356/Brandenburg.png"
+            },
+            {
+              "name":"Carnot",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219640655585350/Carnot.png"
+            },
+            {
               "name":"Champagne",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320625845014539/Champagne.png"
             },
             {
               "name":"Cheshire",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320626025373726/Cheshire.png"
+            },
+            {
+              "name":"Chkalov",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219628370477127/Chkalov.png"
             },
             {
               "name":"Congress",
@@ -310,6 +370,10 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321132080750702/Cossack.png"
             },
             {
+              "name":"Dalian",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219623584772096/Dalian.png"
+            },
+            {
               "name":"Fenyang",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321132248510484/Fenyang.png"
             },
@@ -322,12 +386,28 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321132642795630/Gascogne.png"
             },
             {
+              "name":"Giuseppe Verdi",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219618144755723/Giuseppe_Verdi.png"
+            },
+            {
               "name":"Graf Zeppelin",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321132844089344/GrafZeppelin.png"
             },
             {
               "name":"Groningen",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321133041246218/Groningen.png"
+            },
+            {
+              "name":"Hampshire",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219612918665276/Hampshire.png"
+            },
+            {
+              "name":"Hornet",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219612918665276/Hampshire.png"
+            },
+            {
+              "name":"I-56",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219585915723836/I56.png"
             },
             {
               "name":"Indomitable",
@@ -338,8 +418,16 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321133544538152/Irian.png"
             },
             {
+              "name":"Iwami",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219579066421308/Iwami.png"
+            },
+            {
               "name":"Kaga",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321133779443722/Kaga.png"
+            },
+            {
+              "name":"Kearsarge",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219573915832350/Kearsarge.png"
             },
             {
               "name":"Kidd",
@@ -386,12 +474,24 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321976054411364/PyotrBagration.png"
             },
             {
+              "name":"Rochester",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219564457656381/Rochester.png"
+            },
+            {
               "name":"Roma",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321976335413388/Roma.png"
             },
             {
+              "name":"S-189",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219556903731261/S_189.png"
+            },
+            {
               "name":"Saipan",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321976733876224/Saipan.png"
+            },
+            {
+              "name":"San Diego",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219550557753374/San_Diego.png"
             },
             {
               "name":"Siliwangi",
@@ -408,6 +508,10 @@
             {
               "name":"Tone",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321977744703548/Tone.png"
+            },
+            {
+              "name":"Tulsa",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054247878035517442/Tulsa.png"
             },
             {
               "name":"Vanguard",
@@ -429,7 +533,7 @@
         },
         {
           "name":"Tier X Ship or a Rare Ship",
-          "rate":6.25,
+          "rate":3.3333333333,
           "drops":[
             {
               "name":"Admiral Graf Spee",
@@ -438,6 +542,14 @@
             {
               "name":"Alaska",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322637328384040/Alaska.png"
+            },
+            {
+              "name":"Álvaro de Bazán",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225309853036545/Alvaro_de_Bazan.png"
+            },
+            {
+              "name":"Anchorage",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225303683211364/Anchorage.png"
             },
             {
               "name":"Asashio",
@@ -452,6 +564,10 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322637974274048/Benham.png"
             },
             {
+              "name":"Black",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225297018458142/Black.png"
+            },
+            {
               "name":"Enterprise",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322638150467654/Enterprise.png"
             },
@@ -464,12 +580,32 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322638553104494/Flint.png"
             },
             {
+              "name":"Forrest Sherman",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225291377127424/Forrest_Sherman.png"
+            },
+            {
               "name":"Friesland",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322638779600946/Friesland.png"
             },
             {
+              "name":"FūJin",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225279926685758/Kamikaze_1930.png"
+            },
+            {
+              "name":"Grosser Kurfürst",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225327053873353/Grossdeutschland.png"
+            },
+            {
               "name":"Georgia",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322639006085130/Georgia.png"
+            },
+            {
+              "name":"Giulio Cesare",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225258300837978/Giulio_Cesare.png"
+            },
+            {
+              "name":"Gremyashchy",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225252328144997/Gremyashchy_1942.png"
             },
             {
               "name":"Haida",
@@ -480,8 +616,24 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323019504951336/Hayate.png"
             },
             {
+              "name":"Hizen",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225246447730748/Hizen.png"
+            },
+            {
               "name":"Jean Bart",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323019718869022/JeanBart.png"
+            },
+            {
+              "name":"Kamikaze",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225240785436832/Kamikaze.png"
+            },
+            {
+              "name":"Kamikaze R",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225230324842567/Camo_Kamikaze.png"
+            },
+            {
+              "name":"Khabarovsk",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225223907557396/Khabarovsk.png"
             },
             {
               "name":"Kronshtadt",
@@ -490,6 +642,10 @@
             {
               "name":"Lenin",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323020058595338/Lenin.png"
+            },
+            {
+              "name":"Malta",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225216252936312/Malta.png"
             },
             {
               "name":"Marceau",
@@ -532,6 +688,10 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323380965892126/Neustrashimy.png"
             },
             {
+              "name":"Odin",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225210213138512/Odin.png"
+            },
+            {
               "name":"Salem",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323381318189077/Salem.png"
             },
@@ -564,112 +724,129 @@
       ]
     },
     {
-      "name":"2,500 Doubloons",
+      "name":"5,000 Doubloons",
+      "rate":0.5,
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054252334999412816/5kDoubs.png"
+    },
+    {
+      "name":"1,500 Steel",
+      "rate":2,
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054252458483916810/Steel.png"
+    },
+    {
+      "name":"30 Days of Warships Premium Account",
+      "rate":2,
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054236579411005450/30DayPrem.png"
+    },
+    {
+      "name":"25x Blue Bonus",
+      "rate":8,
+      "drops":[
+        {
+          "name":"25x Credits +160%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA013_CRboost_3_332330ea64c20d99f499db57939f8391cf449d49254bf12f135a1963ab70bfa7.png"
+        },
+        {
+          "name":"25x Ship XP +800%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA023_TotalXPboost_3_2f2a17855078bbb1b9162d4c6980d151c4ce691f7e1c7e6273e303cce8181ea5.png"
+        },
+        {
+          "name":"25x Commander XP +800%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA033_CrewXPboost_3_7a064a7f0191e0e2c7381d268c8b4c7e9911616584b05919a56932b1d9341dd8.png"
+        },
+        {
+          "name":"25x Free XP +2,400%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA043_FreeXPboost_3_a8aa92b232c91f8c4ac9cec3a5bbc518d10e58a77f1a848691bcc42e04da6f6c.png"
+        }
+      ]
+    },
+    {
+      "name":"100x Signals",
+      "rate":25,
+      "drops":[
+        {
+          "name":"100x India Delta",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF007_ID_SignalFlag_f2d2d5a7ad5d5bd69899a37bd889f314f0ed741b6bc48c16309c5ad795615a45.png"
+        },
+        {
+          "name":"100x Sierra Mike",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF005_SM_SignalFlag_6fdc0ca534fd12fc95a2debe29337890ca2235265408da3790ec2d168e6d222d.png"
+        },
+        {
+          "name":"100x Victor Lima",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF017_VL_SignalFlag_5a5c62c1d89de8bd630b73d6ea215c2a1b0bc73d4c178a6a865abef862fbf0ca.png"
+        },
+        {
+          "name":"100x India X-Ray",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF018_IX_SignalFlag_b4d5136e9f723e02db21d4c2af56df64e8dc5f0d95ce1f771db081962aa55f56.png"
+        },
+        {
+          "name":"100x X-Ray Papa Unaone",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF028_Smoke_SignalFlag_a0f9fc9f8c92666289dbad904cd86eb73c08734640f728d94433c273420e663b.png"
+        },
+        {
+          "name":"100x Sierra Bravo",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF029_Sonar_AirDef_SignalFlag_7c9209a0d26ccb6c181b11fa0f7321dacf522b2ce7e0e5b451dd6d2a939eba18.png"
+        },
+        {
+          "name":"100x India Yankee",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF008_IY_SignalFlag_513274515781a70e693753635f2a5fe8f0cb099c3484957cd8360fe95f7d56ab.png"
+        },
+        {
+          "name":"100x Juliet Charlie",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF010_JC_SignalFlag_630763702433bdd273baff6c309656fe64bdb93873c1374feac6c41b9c09a7ea.png"
+        },
+        {
+          "name":"100x November Echo Setteseven",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF016_NE7_SignalFlag_e40c79ae0fdcd53a94580758df7e8fa9da79afcc9b04ca4eb4793ed16f533cc5.png"
+        },
+        {
+          "name":"100x November Foxtrot",
+          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF014_NF_SignalFlag_e3005d27463293e52344aecfcfc72c7bfe6a205e80b8adfd4d1b8f14b2a597f8.png"
+        }
+      ]
+    },
+    {
+      "name":"50,000 Free XP",
       "rate":5,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347026946080778/2500Doubloons.png"
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054253443176472638/FXP.png"
     },
     {
-      "name":"12,500 Coal",
-      "rate":7,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347027243868230/12500Coal.png"
-    },
-    {
-      "name":"180 Days of Warships Premium Account",
-      "rate":1,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347026715402271/180Premium.png"
-    },
-    {
-      "name":"5x Spring Sky, Asian Lantern, or Mosaic Camouflages",
-      "rate":6,
+      "name":"50x Green Bonus",
+      "rate":26,
       "drops":[
         {
-          "name":"5x Spring Sky Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010391171112/5SpringSky.png"
+          "name":"50x Credits +40%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA012_CRboost_2_07ccace07992d68be0db5c64a0ddaa7337d3747922471c6e728e96b5cf8d451b.png"
         },
         {
-          "name":"5x Asian Lantern Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347205719891998/5AsianLantern.png"
+          "name":"50x Ship XP +200%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA022_TotalXPboost_2_e1fd63bedd9ba117c983ec368f92aa8d908dfa7ef6b5524f762c07dab56195ed.png"
         },
         {
-          "name":"5x Mosaic Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010105946142/5Mosaic.png"
+          "name":"50x Commander XP +200%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA032_CrewXPboost_2_aeb94ab6609d166787ff9462a21a2469f8aa7b14a0900df5b89aa893f933d591.png"
+        },
+        {
+          "name":"50x Free XP +600%",
+          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA042_FreeXPboost_2_892c176597652a2095fd4b214f540e6ca98f37c90666e70edaa81b25d1c42855.png"
         }
       ]
     },
     {
-      "name":"25x New Year or Type 3 - New Year Camouflages",
-      "rate":6,
-      "drops": [
-        {
-          "name":"25x New Year Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054241332094320742/25NewYear.png"
-        },
-        {
-          "name":"25x Type 3- New Year Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347012085653504/25Type3NewYear.png"
-        }
-      ]
-    },
-    {
-      "name":"20x New Year Sky Camouflages",
+      "name":"15,000 Coal",
       "rate":10,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347903303958538/20NewYearSky.png"
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054253980001243226/Ciak.png"
     },
     {
-      "name":"20x Camouflages of the Same Type (Winter Strands, Frosty Fir Tree, or New Year Streamer)",
-      "rate":9,
-      "drops":[
-        {
-          "name":"20x Winter Strands Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347011171319828/20WinterStrands.png"
-        },
-        {
-          "name":"20x Frosty Fir Tree Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010659590164/20FrostyFirTree.png"
-        },
-        {
-          "name":"20x New Year Streamer Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010894467108/20NewYearStreamer.png"
-        }
-      ]
+      "name":"1,000 Doubloons",
+      "rate":10,
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054254347162234880/1kDoub.png"
     },
     {
-      "name":"30x Special Signals of the Same Type (Dragon, Red Dragon, Wyvern, Hydra, Ouroboros, Basilisk, Scylla, or Leviathan)",
-      "rate":40,
-      "drops":[
-        {
-          "name":"30x Dragon Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344018220838912/30Dragon.png"
-        },
-        {
-          "name":"30x Red Dragon Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019063894057/30RedDragon.png"
-        },
-        {
-          "name":"30x Wyvern Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019600740423/30Wyvern.png"
-        },
-        {
-          "name":"30x Hydra Special Signals",
-          "link":"https://media.discordapp.net/attachments/922286460068061194/922344018422136852/30Hydra.png"
-        },
-        {
-          "name":"30x Ouroboros Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344018854158366/30Ouroboros.png"
-        },
-        {
-          "name":"30x Basilisk Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019806277652/30Basilisk.png"
-        },
-        {
-          "name":"30x Scylla Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019328122880/30Scylla.png"
-        },
-        {
-          "name":"30x Leviathan Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344018640244796/30Leviathan.png"
-        }
-      ]
+      "name":"7 Days of Warships Premium Account",
+      "rate":10,
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054254240429776966/7DayPrem.png"
     }
   ]
 }

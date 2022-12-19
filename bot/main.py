@@ -10,7 +10,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-containerFileList = ["SantasGift2021.json", "SantasBigGift2021.json", "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json", "SantasMegaGift2022.json"] #list of container data .json file names
+containerFileList = ["Supercontainer.json", "SantasGift2021.json", "SantasBigGift2021.json", "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json", "SantasMegaGift2022.json"] #list of container data .json file names
 containerDataList = [] #container data
 containerNickNameList = [] #container nicknames
 containerNameList = [] #container names
@@ -88,7 +88,7 @@ async def on_message(message):
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
         containerData = containerDataList[containerNickNameList.index(difflib.get_close_matches(message.content.lower().partition(' ')[2], containerNickNameList, n=1, cutoff=0)[0])] #finds closest container name to input
         
-        embeded = discord.Embed(title=containerData["name"] + " Container",color=discord.Color.from_str(containerData["color"]))
+        embeded = discord.Embed(title=containerData["name"],color=discord.Color.from_str(containerData["color"]))
         
         dropPool = containerData["drops"]
         roll = random.random() * 100
