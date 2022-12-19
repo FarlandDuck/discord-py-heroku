@@ -10,7 +10,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-containerFileList = ["SantasMegaGift2021.json"] #list of container data .json file names
+containerFileList = ["SantasMegaGift2021.json", "SantasMegaGift2022.json"] #list of container data .json file names
 containerDataList = [] #container data
 containerNameList = [] #container names
 for filename in containerFileList:
@@ -82,11 +82,11 @@ async def on_message(message):
         else:
             await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
     if '!help'.lower() in message.content.lower() and message.content[0] == "!":
-        await message.channel.send("Use !open [container name]. Always assumes no ships are currently owned and will not account for duplicates and pity successes when opening one container after another.")
+        await message.channel.send("Use !open [container name]. Always assumes no unique items are currently owned and will not account for duplicates and pity successes when opening one container after another.")
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
         containerData = containerDataList[containerNameList.index(difflib.get_close_matches("mega21".partition(' ')[2], containerNameList, n=1, cutoff=0)[0])] #finds closest container name to input
         
-        embeded = discord.Embed(title=containerData["name"],color=discord.Color.from_str(containerData["color"]))
+        embeded = discord.Embed(title=containerData["name"] + " Container",color=discord.Color.from_str(containerData["color"]))
         
         dropPool = containerData["drops"]
         roll = random.random() * 100
