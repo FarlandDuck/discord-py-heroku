@@ -8,7 +8,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
-containerFileList = ["Santa\'sMegaGift2021.json"] #list of container data .json file names
+containerFileList = ["SantasMegaGift2021.json"] #list of container data .json file names
 containerDataList = [] #container data
 containerNameList = [] #container names
 for filename in containerFileList:
