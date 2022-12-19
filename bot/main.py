@@ -14,7 +14,7 @@ containerFileList = ["SantasMegaGift2021.json", "SantasMegaGift2022.json"] #list
 containerDataList = [] #container data
 containerNameList = [] #container names
 for filename in containerFileList:
-    f = open(filename)
+    f = open(filename, "r", encoding="utf-8")
     data = json.load(f)
     containerDataList.append(data)
     containerNameList.append(data["name"])
