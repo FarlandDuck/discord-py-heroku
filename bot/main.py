@@ -84,7 +84,7 @@ async def on_message(message):
     if '!help'.lower() in message.content.lower() and message.content[0] == "!":
         await message.channel.send("Use !open [container name]. Always assumes no unique items are currently owned and will not account for duplicates and pity successes when opening one container after another.")
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
-        containerData = containerDataList[containerNameList.index(difflib.get_close_matches("mega21".partition(' ')[2], containerNameList, n=1, cutoff=0)[0])] #finds closest container name to input
+        containerData = containerDataList[containerNameList.index(difflib.get_close_matches(message.content.lower().partition(' ')[2], containerNameList, n=1, cutoff=0)[0])] #finds closest container name to input
         
         embeded = discord.Embed(title=containerData["name"] + " Container",color=discord.Color.from_str(containerData["color"]))
         
