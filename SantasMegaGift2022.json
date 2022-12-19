@@ -9,7 +9,7 @@
         {
           "name":"Tier V-VII Ship",
           "rate":75,
-          "group":[
+          "drops":[
             [
               {
                 "name":"Admiral Makarov",
@@ -301,7 +301,7 @@
         {
           "name":"Tier VIII-IX Ship",
           "rate":18.75,
-          "group":[
+          "drops":[
             [
               {
                 "name":"Ägir",
@@ -537,7 +537,7 @@
         {
           "name":"Tier X Ship or a Rare Ship",
           "rate":6.25,
-          "group":[
+          "drops":[
             [
               {
                 "name":"Admiral Graf Spee",
@@ -736,7 +736,7 @@
     {
       "name":"7x Red Bonus",
       "rate":8,
-      "group":[
+      "drops":[
         {
           "name":"7x Credits +320%",
           "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA014_CRboost_4_ba11bfca73b7f20a200bf89275f2019006e108f66875e24b6beb9bd84f8ffd67.png"
@@ -773,7 +773,7 @@
     {
       "name":"20x Blue Bonus",
       "rate":38,
-      "group":[
+      "drops":[
         {
           "name":"20x Credits +160%",
           "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA013_CRboost_3_332330ea64c20d99f499db57939f8391cf449d49254bf12f135a1963ab70bfa7.png"
