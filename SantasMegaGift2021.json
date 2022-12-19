@@ -596,9 +596,18 @@
       ]
     },
     {
-      "name":"25x Type 3 - New Year Camouflages",
+      "name":"25x New Year or Type 3 - New Year Camouflages",
       "rate":6,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347012085653504/25Type3NewYear.png"
+      "drops": [
+        {
+          "name":"25x New Year Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054241332094320742/25NewYear.png"
+        },
+        {
+          "name":"25x Type 3- New Year Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347012085653504/25Type3NewYear.png"
+        }
+      ]
     },
     {
       "name":"20x New Year Sky Camouflages",

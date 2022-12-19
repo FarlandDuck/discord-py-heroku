@@ -1,14 +1,14 @@
 {
   "name":"Santa's Big Gift 2021",
-  "color":"0xFFD046",
+  "color":"0x1B4C84",
   "drops":[
     {
       "name":"Premium Ship",
-      "rate":16,
+      "rate":9,
       "drops":[
         {
           "name":"Tier V-VII Ship",
-          "rate":75,
+          "rate":77.7777777778,
           "drops":[
             {
               "name":"Admiral Makarov",
@@ -258,7 +258,7 @@
         },
         {
           "name":"Tier VIII-IX Ship",
-          "rate":18.75,
+          "rate":16.6666666667,
           "drops":[
             {
               "name":"Ägir",
@@ -428,7 +428,7 @@
         },
         {
           "name":"Tier X Ship or a Rare Ship",
-          "rate":6.25,
+          "rate":5.5555555556,
           "drops":[
             {
               "name":"Admiral Graf Spee",
@@ -563,101 +563,92 @@
       ]
     },
     {
-      "name":"2,500 Doubloons",
+      "name":"1,500 Doubloons",
       "rate":5,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347026946080778/2500Doubloons.png"
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054239649616371773/1500Doubloons.png"
     },
     {
-      "name":"12,500 Coal",
+      "name":"7,500 Coal",
       "rate":7,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347027243868230/12500Coal.png"
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054239786216464426/7500Coal.png"
     },
     {
-      "name":"180 Days of Warships Premium Account",
+      "name":"90 Days of Warships Premium Account",
       "rate":1,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347026715402271/180Premium.png"
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054235071009280090/90DayPrem.png"
     },
     {
-      "name":"5x Spring Sky, Asian Lantern, or Mosaic Camouflages",
-      "rate":6,
-      "drops":[
+      "name":"15x New Year or Type 3 - New Year Camouflages",
+      "rate":12,
+      "drops": [
         {
-          "name":"5x Spring Sky Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010391171112/5SpringSky.png"
+          "name":"15x New Year Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240559725821994/15NewYear.png"
         },
         {
-          "name":"5x Asian Lantern Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347205719891998/5AsianLantern.png"
-        },
-        {
-          "name":"5x Mosaic Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010105946142/5Mosaic.png"
+          "name":"15x Type 3- New Year Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240511755567134/15Type3NewYear.png"
         }
       ]
     },
     {
-      "name":"25x Type 3 - New Year Camouflages",
-      "rate":6,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347012085653504/25Type3NewYear.png"
+      "name":"12x New Year Sky Camouflages",
+      "rate":16,
+      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240541677727825/12NewYearSky.png"
     },
     {
-      "name":"20x New Year Sky Camouflages",
-      "rate":10,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347903303958538/20NewYearSky.png"
-    },
-    {
-      "name":"20x Camouflages of the Same Type (Winter Strands, Frosty Fir Tree, or New Year Streamer)",
-      "rate":9,
+      "name":"12x Camouflages of the Same Type (Winter Strands, Frosty Fir Tree, or New Year Streamer)",
+      "rate":18,
       "drops":[
         {
-          "name":"20x Winter Strands Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347011171319828/20WinterStrands.png"
+          "name":"12x Winter Strands Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240550020194324/12WinterStrands.png"
         },
         {
-          "name":"20x Frosty Fir Tree Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010659590164/20FrostyFirTree.png"
+          "name":"12x Frosty Fir Tree Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240541346373673/12FrostyFirTree.png"
         },
         {
-          "name":"20x New Year Streamer Camouflages",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922347010894467108/20NewYearStreamer.png"
+          "name":"12x New Year Streamer Camouflages",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240542071996416/12NewYearStreamer.png"
         }
       ]
     },
     {
-      "name":"30x Special Signals of the Same Type (Dragon, Red Dragon, Wyvern, Hydra, Ouroboros, Basilisk, Scylla, or Leviathan)",
-      "rate":40,
+      "name":"15x Special Signals of the Same Type (Dragon, Red Dragon, Wyvern, Hydra, Ouroboros, Basilisk, Scylla, or Leviathan)",
+      "rate":32,
       "drops":[
         {
-          "name":"30x Dragon Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344018220838912/30Dragon.png"
+          "name":"15x Dragon Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240595855552613/15Dragon.png"
         },
         {
-          "name":"30x Red Dragon Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019063894057/30RedDragon.png"
+          "name":"15x Red Dragon Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240597713629245/15RedDragon.png"
         },
         {
-          "name":"30x Wyvern Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019600740423/30Wyvern.png"
+          "name":"15x Wyvern Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240594928599070/15Wyvern.png"
         },
         {
-          "name":"30x Hydra Special Signals",
-          "link":"https://media.discordapp.net/attachments/922286460068061194/922344018422136852/30Hydra.png"
+          "name":"15x Hydra Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240596216258560/15Hydra.png"
         },
         {
-          "name":"30x Ouroboros Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344018854158366/30Ouroboros.png"
+          "name":"15x Ouroboros Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240597193531443/15Ouroboros.png"
         },
         {
-          "name":"30x Basilisk Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019806277652/30Basilisk.png"
+          "name":"15x Basilisk Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240595427729418/15Basilisk.png"
         },
         {
-          "name":"30x Scylla Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344019328122880/30Scylla.png"
+          "name":"15x Scylla Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240598124666901/15Scylla.png"
         },
         {
-          "name":"30x Leviathan Special Signals",
-          "link":"https://cdn.discordapp.com/attachments/922286460068061194/922344018640244796/30Leviathan.png"
+          "name":"15x Leviathan Special Signals",
+          "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054240596690219078/15Leviathan.png"
         }
       ]
     }

@@ -10,7 +10,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-containerFileList = ["SantasMegaGift2021.json", "SantasGift2022,json", "SantasBigGift2022.json", "SantasMegaGift2022.json"] #list of container data .json file names
+containerFileList = ["SantasBigGift2021,json", "SantasMegaGift2021.json", "SantasGift2022,json", "SantasBigGift2022.json", "SantasMegaGift2022.json"] #list of container data .json file names
 containerDataList = [] #container data
 containerNameList = [] #container names
 for filename in containerFileList:
