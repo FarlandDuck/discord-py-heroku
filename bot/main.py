@@ -86,7 +86,7 @@ async def on_message(message):
     if '!open'.lower() in message.content.lower() and message.content[0] == "!":
         containerData = containerDataList[containerNameList.index(difflib.get_close_matches("mega21".partition(' ')[2], containerNameList, n=1, cutoff=0)[0])] #finds closest container name to input
         
-        embeded = discord.Embed(title=containerData["name"],color=containerData["color"])
+        embeded = discord.Embed(title=containerData["name"],color=discord.Color.from_str(containerData["color"]))
         
         dropPool = containerData["drops"]
         roll = random.random() * 100
