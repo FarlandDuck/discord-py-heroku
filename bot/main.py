@@ -83,9 +83,9 @@ async def on_message(message):
                 await message.channel.send(collectionmessage)
         else:
             await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
-    if '!help'.lower() in message.content.lower() and message.content[0] == "!":
+    if '!help'.lower() in message.content.lower() and message.content[0] == "!" or message.content == "!open":
         await message.channel.send("Use !open [container name]. Always assumes no unique items are currently owned and will not account for duplicates and pity successes when opening one container after another. Available containers: " + ", ".join(sorted(containerNickNameList)))
-    if '!open'.lower() in message.content.lower() and message.content[0] == "!":
+    if '!open'.lower() in message.content.lower() and message.content[0] == "!" and message.content != "!open":
         containerData = containerDataList[containerNickNameList.index(difflib.get_close_matches(message.content.lower().partition(' ')[2], containerNickNameList, n=1, cutoff=0)[0])] #finds closest container name to input
         
         embeded = discord.Embed(title=containerData["name"],color=discord.Color.from_str(containerData["color"]))
