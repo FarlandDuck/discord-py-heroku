@@ -6,7 +6,9 @@ import difflib
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 containerFileList = ["SantasMegaGift2021.json"] #list of container data .json file names
 containerDataList = [] #container data
