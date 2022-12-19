@@ -1,5 +1,6 @@
 {
   "name":"Santa's Gift",
+  "nickname": "gift",
   "color":"0x9AB574",
   "drops":[
     {
@@ -510,7 +511,7 @@
             },
             {
               "name":"Tulsa",
-              "link":""
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054247878035517442/Tulsa.png"
             },
             {
               "name":"Vanguard",
@@ -751,7 +752,7 @@
     },
     {
       "name":"25x Signals",
-      "rate":21,
+      "rate":24,
       "drops":[
         {
           "name":"25x India Delta",

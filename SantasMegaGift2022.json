@@ -1,5 +1,6 @@
 {
   "name":"Santa's Mega Gift",
+  "nickname": "mega",
   "color":"0xB32D1E",
   "drops":[
     {
@@ -510,7 +511,7 @@
             },
             {
               "name":"Tulsa",
-              "link":""
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054247878035517442/Tulsa.png"
             },
             {
               "name":"Vanguard",
