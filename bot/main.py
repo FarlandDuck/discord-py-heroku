@@ -73,8 +73,8 @@ async def on_message(message):
                 array.sort(reverse=True)
                 stdev = statistics.pstdev(array)
                 collectionmessage = "```"
-                collectionmessage += "\nOn average, you will need to open " + str(totalcontainers / runs) + " containers."
-                collectionmessage += "\nThe standard deviation for number of containers needed to complete the collection is " + str(stdev) + "."
+                collectionmessage += "\nOn average, you will need to open " + str(round(totalcontainers / runs, 1)) + " containers."
+                collectionmessage += "\nThe standard deviation for number of containers needed to complete the collection is " + str(round(stdev, 1)) + "."
                 collectionmessage += "\nYou can reasonably expect to open between " + str(array[int(0.9985 * runs)]) + " and " + str(array[int(0.0015 * runs)]) + " containers to complete the collection."
                 collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
                 collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
