@@ -3,6 +3,7 @@ import discord
 import random
 import json
 import difflib
+import statistics
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -70,8 +71,10 @@ async def on_message(message):
                     totalcontainers += containers
                     array.append(containers)
                 array.sort(reverse=True)
+                stdev = statistics.pstdev(array)
                 collectionmessage = "```"
                 collectionmessage += "\nOn average, you will need to open " + str(totalcontainers / runs) + " containers."
+                collectionmessage += "\nThe standard deviation for number of containers needed to complete the collection is " + stdev + "."
                 collectionmessage += "\nYou can reasonably expect to open between " + str(array[int(0.9985 * runs)]) + " and " + str(array[int(0.0015 * runs)]) + " containers to complete the collection."
                 collectionmessage += "\nAt 0.15 percentile:  " + str(array[int(0.0015 * runs)])
                 collectionmessage += "\nAt 2.5 percentile:   " + str(array[int(0.025 * runs)])
@@ -82,7 +85,7 @@ async def on_message(message):
                 collectionmessage += "\nAt 99.85 percentile: " + str(array[int(0.9985 * runs)]) + "```"
                 await message.channel.send(collectionmessage)
         else:
-            await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates need to purchase one collection item]")
+            await message.channel.send("Please use the format: !collection [total number of collection items] [current number of collection items owned] [current number of duplicates owned] [number of duplicates needed to purchase one collection item]")
     if '!help'.lower() in message.content.lower() and message.content[0] == "!" or message.content.lower() == "!open":
         await message.channel.send("Use !open [container name]. Always assumes no unique items are currently owned and will not account for duplicates and pity successes when opening one container after another. Available containers: " + ", ".join(sorted(containerNickNameList)))
     if '!open'.lower() in message.content.lower() and message.content[0] == "!" and message.content.lower() != "!open":
