@@ -8,7 +8,7 @@
       "rate":2.5,
       "drops":[
         {
-          "name":"Tier V-VII Ship",
+          "name":"Tier V-VIII Ship",
           "rate":80,
           "drops":[
             {
@@ -53,7 +53,7 @@
             },
             {
               "name":"Elli",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/a/a5/Ship_PWSC506_Elli.png"
             },
             {
               "name":"Exeter",
@@ -69,7 +69,7 @@
             },
             {
               "name":"Francesco Ferruccio",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/9/9b/Ship_PISC517_Francesco_Ferruccio.png"
             },
             {
               "name":"Gallant",
@@ -105,7 +105,7 @@
             },
             {
               "name":"Jupiter '42",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/9/9f/Ship_PBSD717_Jupiter_1942.png"
             },
             {
               "name":"Karl von Schönberg",
@@ -169,7 +169,7 @@
             },
             {
               "name":"Orion '44",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/9/9f/Ship_PBSD717_Jupiter_1942.png"
             },
             {
               "name":"Perth",
@@ -177,7 +177,7 @@
             },
             {
               "name":"Picardie",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/9/95/Ship_PFSB548_Picardie.png"
             },
             {
               "name":"Poltava",
@@ -189,7 +189,7 @@
             },
             {
               "name":"Rodney",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/9/90/Ship_PBSB717_Rodney.png"
             },
             {
               "name":"Scharnhorst",
@@ -205,7 +205,7 @@
             },
             {
               "name":"Theseus",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/9/97/Ship_PBSA718_Theseus.png"
             },
             {
               "name":"Tokachi",
@@ -214,6 +214,10 @@
             {
               "name":"Toulon",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215952516005978/Toulon.png"
+            },
+            {
+              "name":"Tsurugi",
+              "link":"https://wiki.wgcdn.co/images/2/29/Ship_PJSB549_Tsurugi.png"
             },
             {
               "name":"Weimar",
@@ -229,7 +233,7 @@
             },
             {
               "name":"Xin Zhong Guo 14",
-              "link":""
+              "link":"https://wiki.wgcdn.co/images/1/19/Ship_PZSS716_Xin_Zhong_Guo_14.png"
             },
             {
               "name":"Yukon",
@@ -342,6 +346,14 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321521471528960/Kidd.png"
             },
             {
+              "name":"Minegumo",
+              "link":"https://wiki.wgcdn.co/images/2/27/Ship_PJSD719_Minegumo.png"
+            },
+            {
+              "name":"Navarin",
+              "link":"https://wiki.wgcdn.co/images/c/c6/Ship_PRSB509_Navarin.png"
+            },
+            {
               "name":"Nottingham",
               "link":"https://wiki.wgcdn.co/images/thumb/5/59/Ship_PBSC548_Nottingham.png/160px-Ship_PBSC548_Nottingham.png"
             },
@@ -386,6 +398,10 @@
               "link":"https://wiki.wgcdn.co/images/thumb/b/b9/Ship_PZSB529_Sun_Yat_Sen.png/160px-Ship_PZSB529_Sun_Yat_Sen.png"
             },
             {
+              "name":"Tianjin",
+              "link":"https://wiki.wgcdn.co/images/0/0d/Ship_PZSC719_Tianjin.png"
+            },
+            {
               "name":"Tiger '59",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321977291702302/Tiger59.png"
             },
@@ -406,8 +422,16 @@
               "link":"https://wiki.wgcdn.co/images/thumb/2/25/Ship_PWSD509_Velos.png/160px-Ship_PWSD509_Velos.png"
             },
             {
+              "name":"Victoria",
+              "link":"https://wiki.wgcdn.co/images/c/c0/Ship_PSSB719_Victoria.png"
+            },
+            {
               "name":"Wichita",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321978378031104/Wichita.png"
+            },
+            {
+              "name":"Wiesbaden",
+              "link":"https://wiki.wgcdn.co/images/9/9c/Ship_PGSC728_Wiesbaden.png"
             },
             {
               "name":"Z-35",
@@ -460,6 +484,10 @@
               "link":"https://wiki.wgcdn.co/images/thumb/2/20/Ship_PBSA528_Colossus.png/160px-Ship_PBSA528_Colossus.png"
             },
             {
+              "name":"Defence",
+              "link":"https://wiki.wgcdn.co/images/3/34/Ship_PBSC810_Defence.png"
+            },
+            {
               "name":"Enterprise",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322638150467654/Enterprise.png"
             },
@@ -498,6 +526,10 @@
             {
               "name":"Jean Bart",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323019718869022/JeanBart.png"
+            },
+            {
+              "name":"Johnston",
+              "link":"https://wiki.wgcdn.co/images/a/a7/Ship_PASD719_Johnston.png"
             },
             {
               "name":"Kamikaze",
@@ -542,6 +574,10 @@
             {
               "name":"Odin",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225210213138512/Odin.png"
+            },
+            {
+              "name":"Rhode Island",
+              "link":"https://wiki.wgcdn.co/images/d/d2/Ship_PASB720_Rhode_Island.png"
             },
             {
               "name":"Smolensk",
