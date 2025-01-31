@@ -5,11 +5,11 @@
   "drops":[
     {
       "name":"Premium Ship",
-      "rate":1.5,
+      "rate":1,
       "drops":[
         {
           "name":"Tier V-VII Ship",
-          "rate":83.3333333333,
+          "rate":82,
           "drops":[
             {
               "name":"Admiral Makarov",
@@ -299,7 +299,7 @@
         },
         {
           "name":"Tier VIII-IX Ship",
-          "rate":13.3333333333,
+          "rate":15,
           "drops":[
             {
               "name":"Ägir",
@@ -533,7 +533,7 @@
         },
         {
           "name":"Tier X Ship or a Rare Ship",
-          "rate":3.3333333333,
+          "rate":3,
           "drops":[
             {
               "name":"Admiral Graf Spee",
@@ -724,129 +724,129 @@
       ]
     },
     {
-      "name":"5,000 Doubloons",
-      "rate":0.5,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054252334999412816/5kDoubs.png"
-    },
-    {
       "name":"1,500 Steel",
-      "rate":2,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054252458483916810/Steel.png"
+      "rate":1,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/steel.png"
     },
     {
-      "name":"30 Days of Warships Premium Account",
-      "rate":2,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054236579411005450/30DayPrem.png"
+      "name":"1,500 Research Points",
+      "rate":1,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/paragon-xp.png"
     },
     {
-      "name":"25x Blue Bonus",
-      "rate":8,
+      "name":"15x Blue Bonus",
+      "rate":6.6,
       "drops":[
         {
-          "name":"25x Credits +160%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA013_CRboost_3_332330ea64c20d99f499db57939f8391cf449d49254bf12f135a1963ab70bfa7.png"
+          "name":"15x Credits +160%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA013_CRboost_3_09342a70cb2a912c0ea82369e6eccf76c099f4fa3f544eb11f47319b3dc7c84a.png"
         },
         {
-          "name":"25x Ship XP +800%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA023_TotalXPboost_3_2f2a17855078bbb1b9162d4c6980d151c4ce691f7e1c7e6273e303cce8181ea5.png"
+          "name":"15x Ship XP +800%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA023_TotalXPboost_3_2f2a17855078bbb1b9162d4c6980d151c4ce691f7e1c7e6273e303cce8181ea5.png"
         },
         {
-          "name":"25x Commander XP +800%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA033_CrewXPboost_3_7a064a7f0191e0e2c7381d268c8b4c7e9911616584b05919a56932b1d9341dd8.png"
+          "name":"15x Commander XP +800%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA033_CrewXPboost_3_7a064a7f0191e0e2c7381d268c8b4c7e9911616584b05919a56932b1d9341dd8.png"
         },
         {
-          "name":"25x Free XP +2,400%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA043_FreeXPboost_3_a8aa92b232c91f8c4ac9cec3a5bbc518d10e58a77f1a848691bcc42e04da6f6c.png"
+          "name":"15x Free XP +2,400%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA043_FreeXPboost_3_a8aa92b232c91f8c4ac9cec3a5bbc518d10e58a77f1a848691bcc42e04da6f6c.png"
         }
       ]
     },
     {
-      "name":"100x Signals",
-      "rate":25,
+      "name":"50x Signals",
+      "rate":30,
       "drops":[
         {
-          "name":"100x India Delta",
+          "name":"50x India Delta",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF007_ID_SignalFlag_f2d2d5a7ad5d5bd69899a37bd889f314f0ed741b6bc48c16309c5ad795615a45.png"
         },
         {
-          "name":"100x Sierra Mike",
+          "name":"50x Sierra Mike",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF005_SM_SignalFlag_6fdc0ca534fd12fc95a2debe29337890ca2235265408da3790ec2d168e6d222d.png"
         },
         {
-          "name":"100x Victor Lima",
+          "name":"50x Victor Lima",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF017_VL_SignalFlag_5a5c62c1d89de8bd630b73d6ea215c2a1b0bc73d4c178a6a865abef862fbf0ca.png"
         },
         {
-          "name":"100x India X-Ray",
+          "name":"50x India X-Ray",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF018_IX_SignalFlag_b4d5136e9f723e02db21d4c2af56df64e8dc5f0d95ce1f771db081962aa55f56.png"
         },
         {
-          "name":"100x X-Ray Papa Unaone",
+          "name":"50x X-Ray Papa Unaone",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF028_Smoke_SignalFlag_a0f9fc9f8c92666289dbad904cd86eb73c08734640f728d94433c273420e663b.png"
         },
         {
-          "name":"100x Sierra Bravo",
+          "name":"50x Sierra Bravo",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF029_Sonar_AirDef_SignalFlag_7c9209a0d26ccb6c181b11fa0f7321dacf522b2ce7e0e5b451dd6d2a939eba18.png"
         },
         {
-          "name":"100x India Yankee",
+          "name":"50x India Yankee",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF008_IY_SignalFlag_513274515781a70e693753635f2a5fe8f0cb099c3484957cd8360fe95f7d56ab.png"
         },
         {
-          "name":"100x Juliet Charlie",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF010_JC_SignalFlag_630763702433bdd273baff6c309656fe64bdb93873c1374feac6c41b9c09a7ea.png"
+          "name":"50x Charlie Kilo",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/flags/PCEF030_CK_SignalFlag_896c2e420278245695aeff3cdcbcf5dcd3026761e11f39a69e432355f7a42299.png"
         },
         {
-          "name":"100x November Echo Setteseven",
+          "name":"50x November Echo Setteseven",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF016_NE7_SignalFlag_e40c79ae0fdcd53a94580758df7e8fa9da79afcc9b04ca4eb4793ed16f533cc5.png"
         },
         {
-          "name":"100x November Foxtrot",
+          "name":"50x November Foxtrot",
           "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF014_NF_SignalFlag_e3005d27463293e52344aecfcfc72c7bfe6a205e80b8adfd4d1b8f14b2a597f8.png"
         }
       ]
     },
     {
-      "name":"50,000 Free XP",
-      "rate":5,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054253443176472638/FXP.png"
+      "name":"1,000 Doubloons",
+      "rate":4,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/doubloons-1.png"
     },
     {
-      "name":"50x Green Bonus",
-      "rate":26,
+      "name":"7 Days of Warships Premium Account",
+      "rate":5.4,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/wows-premium-7.png"
+    },
+    {
+      "name":"25,000 Free XP",
+      "rate":6.5,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/free-xp.png"
+    },
+    {
+      "name":"75,000 Elite Commander XP",
+      "rate":6.5,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/elite-xp.png"
+    },
+    {
+      "name":"25x Green Bonus",
+      "rate":28,
       "drops":[
         {
-          "name":"50x Credits +40%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA012_CRboost_2_07ccace07992d68be0db5c64a0ddaa7337d3747922471c6e728e96b5cf8d451b.png"
+          "name":"25x Credits +40%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA012_CRboost_2_adcb20408f009b810024124af7ea4b190710e8139f5bc55a82dca46764ee88b0.png"
         },
         {
-          "name":"50x Ship XP +200%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA022_TotalXPboost_2_e1fd63bedd9ba117c983ec368f92aa8d908dfa7ef6b5524f762c07dab56195ed.png"
+          "name":"25x Ship XP +200%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA022_TotalXPboost_2_e1fd63bedd9ba117c983ec368f92aa8d908dfa7ef6b5524f762c07dab56195ed.png"
         },
         {
-          "name":"50x Commander XP +200%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA032_CrewXPboost_2_aeb94ab6609d166787ff9462a21a2469f8aa7b14a0900df5b89aa893f933d591.png"
+          "name":"25x Commander XP +200%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA032_CrewXPboost_2_aeb94ab6609d166787ff9462a21a2469f8aa7b14a0900df5b89aa893f933d591.png"
         },
         {
-          "name":"50x Free XP +600%",
-          "link":"https://glossary-wows-global.gcdn.co/icons/camoboost/PCEA042_FreeXPboost_2_892c176597652a2095fd4b214f540e6ca98f37c90666e70edaa81b25d1c42855.png"
+          "name":"25x Free XP +600%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA042_FreeXPboost_2_892c176597652a2095fd4b214f540e6ca98f37c90666e70edaa81b25d1c42855.png"
         }
       ]
     },
     {
-      "name":"15,000 Coal",
+      "name":"7,500 Coal",
       "rate":10,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054253980001243226/Ciak.png"
-    },
-    {
-      "name":"1,000 Doubloons",
-      "rate":10,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054254347162234880/1kDoub.png"
-    },
-    {
-      "name":"7 Days of Warships Premium Account",
-      "rate":10,
-      "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054254240429776966/7DayPrem.png"
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
     }
   ]
 }
