@@ -1,15 +1,15 @@
 {
-  "name":"Santa's Mega Gift 2024 Container",
-  "nickname": "mega",
-  "color":"0xE1E5EF",
+  "name":"Santa's Gift 2024 Container",
+  "nickname": "gift",
+  "color":"0x2DB0BC",
   "drops":[
     {
       "name":"Premium Ship",
-      "rate":2.5,
+      "rate":16,
       "drops":[
         {
           "name":"Tier V-VIII Ship",
-          "rate":80,
+          "rate":75,
           "drops":[
             {
               "name":"Admiral Makarov",
@@ -247,7 +247,7 @@
         },
         {
           "name":"Tier VIII-IX Ship",
-          "rate":16,
+          "rate":18.75,
           "drops":[
             {
               "name":"Ägir",
@@ -445,7 +445,7 @@
         },
         {
           "name":"Tier X Ship or a Rare Ship",
-          "rate":4,
+          "rate":6.25,
           "drops":[
             {
               "name":"Admiral Graf Spee",
@@ -613,7 +613,7 @@
     },
     {
       "name":"Golden Gift",
-      "rate":1,
+      "rate":10,
       "drops":[
         {
           "name":"Premium Ship",
@@ -692,106 +692,71 @@
       ]
     },
     {
-      "name":"30 Days of Warships Premium Account",
+      "name":"180 Days of Warships Premium Account",
       "rate":1,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/wows-premium-30.png"
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/wows-premium-180.png"
     },
     {
-      "name":"3x Blue Bonus",
-      "rate":10,
+      "name":"7x Red Bonus",
+      "rate":8,
       "drops":[
         {
-          "name":"3x Credits +160%",
+          "name":"7x Credits +320%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA014_CRboost_4_99713a7e8b4ee65ff3af43c723bfa91b44d211b3a4c6a3ac690575665f06badd.png"
+        },
+        {
+          "name":"7x Ship XP +1,600%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA024_TotalXPboost_4_b8739fca597f277a2884259dc454d20af244471e408db62824fca8820e82f4ed.png"
+        },
+        {
+          "name":"7x Commander XP +1,600%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA034_CrewXPboost_4_30a354b2e39c4fa8b10731337af1b84314c95d4e702e0738afb0d42c03a192b6.png"
+        },
+        {
+          "name":"7x Free XP +7,200%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA044_FreeXPboost_4_60fd3229a1453944ff3844110339dd943c38c3bf27c271119b69cc18f9af7528.png"
+        }
+      ]
+    },
+    {
+      "name":"2,500 Doubloons",
+      "rate":5,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/doubloons-2500.png"
+    },
+    {
+      "name":"12,500 Coal",
+      "rate":8,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
+    },
+    {
+      "name":"20x Blue Bonus",
+      "rate":32,
+      "drops":[
+        {
+          "name":"20x Credits +160%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA013_CRboost_3_09342a70cb2a912c0ea82369e6eccf76c099f4fa3f544eb11f47319b3dc7c84a.png"
         },
         {
-          "name":"3x Ship XP +800%",
+          "name":"20x Ship XP +800%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA023_TotalXPboost_3_2f2a17855078bbb1b9162d4c6980d151c4ce691f7e1c7e6273e303cce8181ea5.png"
         },
         {
-          "name":"3x Commander XP +800%",
+          "name":"20x Commander XP +800%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA033_CrewXPboost_3_7a064a7f0191e0e2c7381d268c8b4c7e9911616584b05919a56932b1d9341dd8.png"
         },
         {
-          "name":"3x Free XP +2,400%",
+          "name":"20x Free XP +2,400%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA043_FreeXPboost_3_a8aa92b232c91f8c4ac9cec3a5bbc518d10e58a77f1a848691bcc42e04da6f6c.png"
         }
       ]
     },
     {
-      "name":"25x Signals",
-      "rate":24,
-      "drops":[
-        {
-          "name":"25x India Delta",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF007_ID_SignalFlag_f2d2d5a7ad5d5bd69899a37bd889f314f0ed741b6bc48c16309c5ad795615a45.png"
-        },
-        {
-          "name":"25x Sierra Mike",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF005_SM_SignalFlag_6fdc0ca534fd12fc95a2debe29337890ca2235265408da3790ec2d168e6d222d.png"
-        },
-        {
-          "name":"25x Victor Lima",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF017_VL_SignalFlag_5a5c62c1d89de8bd630b73d6ea215c2a1b0bc73d4c178a6a865abef862fbf0ca.png"
-        },
-        {
-          "name":"25x India X-Ray",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF018_IX_SignalFlag_b4d5136e9f723e02db21d4c2af56df64e8dc5f0d95ce1f771db081962aa55f56.png"
-        },
-        {
-          "name":"25x X-Ray Papa Unaone",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF028_Smoke_SignalFlag_a0f9fc9f8c92666289dbad904cd86eb73c08734640f728d94433c273420e663b.png"
-        },
-        {
-          "name":"25x Sierra Bravo",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF029_Sonar_AirDef_SignalFlag_7c9209a0d26ccb6c181b11fa0f7321dacf522b2ce7e0e5b451dd6d2a939eba18.png"
-        }
-      ]
-    },
-    {
-      "name":"500 Doubloons",
-      "rate":5,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/doubloons-1.png"
-    },
-    {
-      "name":"Port Slot",
-      "rate":5.5,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/slots.png"
-    },
-    {
-      "name":"12x Green Bonus",
-      "rate":24,
-      "drops":[
-        {
-          "name":"12x Credits +40%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA012_CRboost_2_adcb20408f009b810024124af7ea4b190710e8139f5bc55a82dca46764ee88b0.png"
-        },
-        {
-          "name":"12x Ship XP +200%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA022_TotalXPboost_2_e1fd63bedd9ba117c983ec368f92aa8d908dfa7ef6b5524f762c07dab56195ed.png"
-        },
-        {
-          "name":"12x Commander XP +200%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA032_CrewXPboost_2_aeb94ab6609d166787ff9462a21a2469f8aa7b14a0900df5b89aa893f933d591.png"
-        },
-        {
-          "name":"12x Free XP +600%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA042_FreeXPboost_2_892c176597652a2095fd4b214f540e6ca98f37c90666e70edaa81b25d1c42855.png"
-        }
-      ]
-    },
-    {
-      "name":"2,500 Coal",
-      "rate":7,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
-    },
-    {
-      "name":"20,000 Elite Commander XP",
+      "name":"100,000 Elite Commander XP",
       "rate":10,
       "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/elite-xp.png"
     },
     {
-      "name":"400,000 Credits",
+      "name":"2,250,000 Credits",
       "rate":10,
       "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/credits-48000.png"
     }
