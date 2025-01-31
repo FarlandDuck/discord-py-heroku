@@ -1,7 +1,7 @@
 {
-  "name":"Santa's Mega Gift 2024 Container",
-  "nickname": "mega",
-  "color":"0xE1E5EF",
+  "name":"Santa's Gift 2024 Container",
+  "nickname": "gift",
+  "color":"0x2DB0BC",
   "drops":[
     {
       "name":"Premium Ship",
