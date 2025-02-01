@@ -97,10 +97,10 @@ async def collection(ctx, n: int, k: int, d: int, c: int):
     response += "```"
     await ctx.send(response)
 
-# Command: Help
-@bot.command(name="help")
-async def help_command(ctx):
-    """Provides help message for available commands."""
+# Command: Info
+@bot.command(name="info")  # Change the command name
+async def info(ctx):
+    """Provides info message for available containers."""
     await ctx.send(f"Use `!open [container name]`. Available containers: {', '.join(sorted(container_data.keys()))}")
 
 # Command: Open Container
@@ -111,7 +111,7 @@ async def open_container(ctx, *, container_name: str):
     # Find best matching container name
     matched_name = difflib.get_close_matches(container_name.lower(), container_data.keys(), n=1, cutoff=0)
     if not matched_name:
-        await ctx.send("Invalid container name. Use `!help` to see available containers.")
+        await ctx.send("Invalid container name. Use `!info` to see available containers.")
         return
 
     container = container_data[matched_name[0]]
