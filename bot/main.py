@@ -142,7 +142,7 @@ async def open_container(ctx, *, container_name: str = None):
 
     # If no container name is provided
     if container_name is None:
-        await ctx.send("Usage: `!open [container name]`\nUse `!info` to see available containers.")
+        await ctx.send("Usage: `!open [container_name]`\nUse `!info` to see available containers.")
         return
 
     # Find best matching container name
@@ -156,30 +156,35 @@ async def open_container(ctx, *, container_name: str = None):
     # Embed for Discord message
     embed = discord.Embed(title=container["name"], color=discord.Color.from_str(container["color"]))
 
-    drop_pool = container["drops"]
-    roll = random.uniform(0, 100)
-    drop_index = 0
-    last_rate = 100
+    drop_pool = container["drops"]  # Initial drop pool
+    roll = random.uniform(0, 100)  # Generate a random roll
+    last_rate = 100  # Used to track probability distribution
 
-    # Determine the drop
-    while "drops" in drop_pool[drop_index]:
-        drop_pool = drop_pool[drop_index]["drops"]
-        roll = random.uniform(0, 100)
-        drop_index = 0
+    # Traverse drop pools properly
+    while True:
+        # Check if drop pool uses custom rates
+        if "rate" in drop_pool[0]:
+            cumulative_rate = 0
+            for i, drop in enumerate(drop_pool):
+                cumulative_rate += drop["rate"]
+                if roll <= cumulative_rate:  # Select the correct drop
+                    selected_drop = drop
+                    break
+        else:
+            # Even distribution
+            selected_drop = random.choice(drop_pool)
 
-    if "rate" in drop_pool[0]:  # Manual rate distribution
-        while roll >= 0:
-            roll -= drop_pool[drop_index]["rate"] / 100 * last_rate
-            drop_index += 1
-    else:  # Even distribution
-        drop_index = int(roll // (last_rate / len(drop_pool)))
-
-    drop = drop_pool[drop_index]
+        # If the selected drop has sub-drops (nested pool), continue traversal
+        if "drops" in selected_drop:
+            drop_pool = selected_drop["drops"]
+            roll = random.uniform(0, 100)  # Re-roll for next layer
+        else:
+            break  # We've reached the final item
 
     # Embed the result
-    embed.description = drop["name"]
-    if "link" in drop:
-        embed.set_image(url=drop["link"])
+    embed.description = selected_drop["name"]
+    if "link" in selected_drop:
+        embed.set_image(url=selected_drop["link"])
 
     await ctx.send(embed=embed)
 
