@@ -2,8 +2,8 @@ import os
 import discord
 import random
 import json
-import statistics
 import difflib
+import io
 from discord.ext import commands
 import matplotlib.pyplot as plt
 import numpy as np
