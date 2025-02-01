@@ -112,7 +112,7 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
     # Create a file to send as an attachment
     file = discord.File(img_buffer, filename="collection_simulation.png")
 
-    await ctx.send("Percentile Graph:", file=file)
+    await ctx.send(file=file)
 
 # Command: Info
 @bot.command(name="info")
