@@ -5,6 +5,8 @@ import json
 import statistics
 import difflib
 from discord.ext import commands
+import matplotlib.pyplot as plt
+import numpy as np
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -60,22 +62,11 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
         await ctx.send("Usage: `!collection [total_items] [owned_items] [duplicates] [conversion_cost]`")
         return
     
-    # Input validation
-    if n > 100 or n <= 0:
-        await ctx.send("There must be between 1 and 100 items in a collection.")
-        return
-    if k > n or k < 0:
-        await ctx.send("The number of owned items must be between 0 and the total number of items.")
-        return
-    if d < 0:
-        await ctx.send("Duplicates cannot be negative.")
-        return
-    if c <= 0:
-        await ctx.send("Conversion cost of duplicates must be 1 or higher.")
+    if n > 100 or n <= 0 or k > n or k < 0 or d < 0 or c <= 0:
+        await ctx.send("Invalid input values. Please check the command usage.")
         return
 
     runs = 100000
-    total_containers = 0
     results = []
 
     for _ in range(runs):
@@ -86,7 +77,7 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
 
         while empties > 0:
             containers += 1
-            index = random.randint(0, n - 1)
+            index = np.random.randint(0, n)
             if collection[index] == 1:
                 dupes += 1
             else:
@@ -96,27 +87,32 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
             if dupes // c >= empties:
                 break
 
-        total_containers += containers
         results.append(containers)
 
-    results.sort(reverse=True)
-    stdev = statistics.pstdev(results)
+    results.sort()
+    percentiles = np.linspace(0, 100, len(results))
 
-    # Generate response
-    percentiles = [0.0015, 0.025, 0.16, 0.5, 0.84, 0.975, 0.9985]
-    percentile_values = [results[int(p * runs)] for p in percentiles]
+    # Generate the plot
+    plt.figure(figsize=(10, 5))
+    plt.plot(percentiles, results, label="Number of Containers Needed", color='b')
+    plt.xlabel("Percentile of Players")
+    plt.ylabel("Number of Containers Opened")
+    plt.title("Containers Needed to Complete a Collection by Percentile")
+    plt.grid(True)
+    plt.legend()
 
-    response = f"```\n"
-    response += f"On average, you will need to open {total_containers / runs:.1f} containers.\n"
-    response += f"Standard deviation: {stdev:.1f} containers.\n"
-    response += f"Expected range: {percentile_values[6]} - {percentile_values[0]} containers.\n"
+    # Save the plot to a BytesIO object
+    img_buffer = io.BytesIO()
+    plt.savefig(img_buffer, format='png')
+    img_buffer.seek(0)
 
-    labels = ["0.15%", "2.5%", "16%", "50% (Median)", "84%", "97.5%", "99.85%"]
-    for label, value in zip(labels, percentile_values):
-        response += f"At {label} percentile: {value}\n"
+    # Close the plot
+    plt.close()
 
-    response += "```"
-    await ctx.send(response)
+    # Create a file to send as an attachment
+    file = discord.File(img_buffer, filename="collection_simulation.png")
+
+    await ctx.send("Percentile Graph:", file=file)
 
 # Command: Info
 @bot.command(name="info")
