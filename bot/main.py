@@ -12,14 +12,14 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 intents = discord.Intents.default()
 intents.message_content = True
 
-# Create a bot instance with command prefix "!"
-bot = commands.Bot(command_prefix="!", intents=intents)
+# Create bot instance without the default help command
+bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 
 # Load container data
 container_files = [
-    "Supercontainer.json", "SantasGift2021.json", "SantasBigGift2021.json", 
-    "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json", 
-    "SantasMegaGift2022.json", "SantasGift2023.json", "SantasBigGift2023.json", 
+    "Supercontainer.json", "SantasGift2021.json", "SantasBigGift2021.json",
+    "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json",
+    "SantasMegaGift2022.json", "SantasGift2023.json", "SantasBigGift2023.json",
     "SantasMegaGift2023.json", "SantasGift2024.json", "SantasMegaGift2024.json"
 ]
 
@@ -34,10 +34,31 @@ for filename in container_files:
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
+# Custom Help Command
+@bot.command(name="help")
+async def custom_help(ctx):
+    """Provides a cleaner help message."""
+    embed = discord.Embed(
+        title="Available Commands",
+        description="Here are the available commands for the bot:",
+        color=discord.Color.blue()
+    )
+    embed.add_field(name="`!collection [total] [owned] [dupes] [cost]`", value="Simulates the number of containers needed to complete a collection.", inline=False)
+    embed.add_field(name="`!open [container_name]`", value="Opens a container and gives a random drop.", inline=False)
+    embed.add_field(name="`!info`", value="Lists all available containers.", inline=False)
+    embed.add_field(name="`!help`", value="Displays this help message.", inline=False)
+
+    await ctx.send(embed=embed)
+
 # Command: Collection Simulation
 @bot.command(name="collection")
-async def collection(ctx, n: int, k: int, d: int, c: int):
+async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = None):
     """Simulates the number of containers needed to complete a collection."""
+
+    # If no arguments provided, show usage instruction
+    if n is None or k is None or d is None or c is None:
+        await ctx.send("Usage: `!collection [total_items] [owned_items] [duplicates] [conversion_cost]`")
+        return
     
     # Input validation
     if n > 100 or n <= 0:
@@ -89,25 +110,30 @@ async def collection(ctx, n: int, k: int, d: int, c: int):
     response += f"On average, you will need to open {total_containers / runs:.1f} containers.\n"
     response += f"Standard deviation: {stdev:.1f} containers.\n"
     response += f"Expected range: {percentile_values[6]} - {percentile_values[0]} containers.\n"
-    
+
     labels = ["0.15%", "2.5%", "16%", "50% (Median)", "84%", "97.5%", "99.85%"]
     for label, value in zip(labels, percentile_values):
         response += f"At {label} percentile: {value}\n"
-    
+
     response += "```"
     await ctx.send(response)
 
 # Command: Info
-@bot.command(name="info")  # Change the command name
+@bot.command(name="info")
 async def info(ctx):
     """Lists available containers."""
     await ctx.send(f"Use `!open [container name]`. Available containers: {', '.join(sorted(container_data.keys()))}")
 
 # Command: Open Container
 @bot.command(name="open")
-async def open_container(ctx, *, container_name: str):
+async def open_container(ctx, *, container_name: str = None):
     """Simulates opening a container and getting a random drop."""
-    
+
+    # If no container name is provided
+    if container_name is None:
+        await ctx.send("Usage: `!open [container_name]`\nUse `!info` to see available containers.")
+        return
+
     # Find best matching container name
     matched_name = difflib.get_close_matches(container_name.lower(), container_data.keys(), n=1, cutoff=0)
     if not matched_name:
@@ -115,10 +141,10 @@ async def open_container(ctx, *, container_name: str):
         return
 
     container = container_data[matched_name[0]]
-    
+
     # Embed for Discord message
     embed = discord.Embed(title=container["name"], color=discord.Color.from_str(container["color"]))
-    
+
     drop_pool = container["drops"]
     roll = random.uniform(0, 100)
     drop_index = 0
