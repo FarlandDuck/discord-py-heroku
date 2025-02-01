@@ -32,7 +32,6 @@ for filename in container_files:
 # Bot Ready Event
 @bot.event
 async def on_ready():
-    await bot.tree.sync()  # Force sync
     print(f'{bot.user.name} has connected to Discord!')
 
 # Command: Collection Simulation
@@ -101,7 +100,7 @@ async def collection(ctx, n: int, k: int, d: int, c: int):
 # Command: Info
 @bot.command(name="info")  # Change the command name
 async def info(ctx):
-    """Provides info message for available containers."""
+    """Lists available containers."""
     await ctx.send(f"Use `!open [container name]`. Available containers: {', '.join(sorted(container_data.keys()))}")
 
 # Command: Open Container
@@ -148,11 +147,4 @@ async def open_container(ctx, *, container_name: str):
     await ctx.send(embed=embed)
 
 # Run the bot
-import asyncio
-
-async def main():
-    async with bot:
-        await bot.start(TOKEN)
-
-asyncio.run(main())
-
+bot.run(TOKEN)
