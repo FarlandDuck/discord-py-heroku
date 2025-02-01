@@ -95,15 +95,29 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
     # Generate the plot
     plt.figure(figsize=(10, 5))
     plt.plot(percentiles, results, label="Number of Containers Needed", color='b')
-    plt.xlabel("Percent of Players that Will Complete the Collection")
+    plt.xlabel("Percentile of Players")
     plt.ylabel("Number of Containers Opened")
-    plt.title("Containers Needed to Complete the Collection by Percentile")
+    plt.title("Containers Needed to Complete a Collection by Percentile")
     plt.grid(True)
     plt.legend()
 
+    # Add contextual information in a legend box
+    info_text = (
+        f"Total Items in Collection: {n}\n"
+        f"Items Owned: {k}\n"
+        f"Duplicates Owned: {d}\n"
+        f"Duplicate:Item Conversion: {c}:1"
+    )
+    plt.annotate(
+        info_text,
+        xy=(0.98, 0.02), xycoords='axes fraction',
+        fontsize=10, color='black', ha='right', va='bottom',
+        bbox=dict(boxstyle="round,pad=0.5", edgecolor='black', facecolor='white')
+    )
+
     # Save the plot to a BytesIO object
     img_buffer = io.BytesIO()
-    plt.savefig(img_buffer, format='png')
+    plt.savefig(img_buffer, format='png', bbox_inches='tight')
     img_buffer.seek(0)
 
     # Close the plot
@@ -112,6 +126,7 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
     # Create a file to send as an attachment
     file = discord.File(img_buffer, filename="collection_simulation.png")
 
+    # Send only the image file
     await ctx.send(file=file)
 
 # Command: Info
