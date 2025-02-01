@@ -4,22 +4,23 @@ import random
 import json
 import statistics
 import difflib
+from discord import app_commands
 from discord.ext import commands
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-# Setup intents
+# Enable bot intents
 intents = discord.Intents.default()
 intents.message_content = True
 
-# Create a bot instance with command prefix "!"
+# Create bot instance
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Load container data
 container_files = [
-    "Supercontainer.json", "SantasGift2021.json", "SantasBigGift2021.json", 
-    "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json", 
-    "SantasMegaGift2022.json", "SantasGift2023.json", "SantasBigGift2023.json", 
+    "Supercontainer.json", "SantasGift2021.json", "SantasBigGift2021.json",
+    "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json",
+    "SantasMegaGift2022.json", "SantasGift2023.json", "SantasBigGift2023.json",
     "SantasMegaGift2023.json", "SantasGift2024.json", "SantasMegaGift2024.json"
 ]
 
@@ -27,30 +28,37 @@ container_data = {}
 for filename in container_files:
     with open(filename, "r", encoding="utf-8") as f:
         data = json.load(f)
-        container_data[data["nickname"].lower()] = data  # Store by lowercase nickname for easy lookup
+        container_data[data["nickname"].lower()] = data  # Store by lowercase nickname
 
-# Bot Ready Event
+# Event: Bot is Ready
 @bot.event
 async def on_ready():
-    print(f'{bot.user.name} has connected to Discord!')
+    await bot.tree.sync()  # Sync slash commands
+    print(f'{bot.user.name} is now online!')
 
-# Command: Collection Simulation
-@bot.command(name="collection")
-async def collection(ctx, n: int, k: int, d: int, c: int):
-    """Simulates the number of containers needed to complete a collection."""
+# Slash Command: Collection Simulation
+@bot.tree.command(name="collection", description="Simulates the number of containers needed to complete a collection.")
+@app_commands.describe(
+    total_items="Total number of items in the collection",
+    owned_items="Number of items you already own",
+    duplicates="Number of duplicate items",
+    conversion_cost="Number of duplicates needed to convert into an item"
+)
+async def collection(interaction: discord.Interaction, total_items: int, owned_items: int, duplicates: int, conversion_cost: int):
+    """Simulates collection completion"""
     
     # Input validation
-    if n > 100 or n <= 0:
-        await ctx.send("There must be between 1 and 100 items in a collection.")
+    if total_items > 100 or total_items <= 0:
+        await interaction.response.send_message("Total items must be between 1 and 100.", ephemeral=True)
         return
-    if k > n or k < 0:
-        await ctx.send("The number of owned items must be between 0 and the total number of items.")
+    if owned_items > total_items or owned_items < 0:
+        await interaction.response.send_message("Owned items must be between 0 and the total items.", ephemeral=True)
         return
-    if d < 0:
-        await ctx.send("Duplicates cannot be negative.")
+    if duplicates < 0:
+        await interaction.response.send_message("Duplicates cannot be negative.", ephemeral=True)
         return
-    if c <= 0:
-        await ctx.send("Conversion cost of duplicates must be 1 or higher.")
+    if conversion_cost <= 0:
+        await interaction.response.send_message("Conversion cost must be 1 or higher.", ephemeral=True)
         return
 
     runs = 100000
@@ -58,21 +66,21 @@ async def collection(ctx, n: int, k: int, d: int, c: int):
     results = []
 
     for _ in range(runs):
-        collection = [-1] * (n - k) + [1] * k
+        collection = [-1] * (total_items - owned_items) + [1] * owned_items
         containers = 0
-        dupes = d
-        empties = n - k
+        dupes = duplicates
+        empties = total_items - owned_items
 
         while empties > 0:
             containers += 1
-            index = random.randint(0, n - 1)
+            index = random.randint(0, total_items - 1)
             if collection[index] == 1:
                 dupes += 1
             else:
                 collection[index] = 1
                 empties -= 1
 
-            if dupes // c >= empties:
+            if dupes // conversion_cost >= empties:
                 break
 
         total_containers += containers
@@ -81,37 +89,32 @@ async def collection(ctx, n: int, k: int, d: int, c: int):
     results.sort(reverse=True)
     stdev = statistics.pstdev(results)
 
-    # Generate response
     percentiles = [0.0015, 0.025, 0.16, 0.5, 0.84, 0.975, 0.9985]
     percentile_values = [results[int(p * runs)] for p in percentiles]
 
     response = f"```\n"
-    response += f"On average, you will need to open {total_containers / runs:.1f} containers.\n"
+    response += f"Average containers needed: {total_containers / runs:.1f}\n"
     response += f"Standard deviation: {stdev:.1f} containers.\n"
     response += f"Expected range: {percentile_values[6]} - {percentile_values[0]} containers.\n"
-    
+
     labels = ["0.15%", "2.5%", "16%", "50% (Median)", "84%", "97.5%", "99.85%"]
     for label, value in zip(labels, percentile_values):
         response += f"At {label} percentile: {value}\n"
     
     response += "```"
-    await ctx.send(response)
+    await interaction.response.send_message(response)
 
-# Command: Info
-@bot.command(name="info")  # Change the command name
-async def info(ctx):
-    """Provides info message for available containers."""
-    await ctx.send(f"Use `!open [container name]`. Available containers: {', '.join(sorted(container_data.keys()))}")
-
-# Command: Open Container
-@bot.command(name="open")
-async def open_container(ctx, *, container_name: str):
-    """Simulates opening a container and getting a random drop."""
+# Slash Command: Open Container
+@bot.tree.command(name="open", description="Open a container and receive a drop.")
+@app_commands.describe(container_name="Name of the container to open")
+@app_commands.choices(container_name=[app_commands.Choice(name=name, value=name) for name in container_data.keys()])
+async def open_container(interaction: discord.Interaction, container_name: str):
+    """Simulates opening a container"""
     
-    # Find best matching container name
+    # Find closest matching container
     matched_name = difflib.get_close_matches(container_name.lower(), container_data.keys(), n=1, cutoff=0)
     if not matched_name:
-        await ctx.send("Invalid container name. Use `!info` to see available containers.")
+        await interaction.response.send_message("Invalid container name. Use `/help` to see available containers.", ephemeral=True)
         return
 
     container = container_data[matched_name[0]]
@@ -141,10 +144,4 @@ async def open_container(ctx, *, container_name: str):
 
     # Embed the result
     embed.description = drop["name"]
-    if "link" in drop:
-        embed.set_image(url=drop["link"])
-
-    await ctx.send(embed=embed)
-
-# Run the bot
-bot.run(TOKEN)
+   
