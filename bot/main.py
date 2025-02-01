@@ -106,7 +106,7 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
         f"Total Items in Collection: {n}\n"
         f"Items Owned: {k}\n"
         f"Duplicates Owned: {d}\n"
-        f"Duplicate:Item Conversion: {c}:1"
+        f"Duplicate Conversion Rate: {c}"
     )
     plt.annotate(
         info_text,
