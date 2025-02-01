@@ -17,19 +17,18 @@ intents.message_content = True
 # Create bot instance without the default help command
 bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 
-# Load container data
-container_files = [
-    "Supercontainer.json", "SantasGift2021.json", "SantasBigGift2021.json",
-    "SantasMegaGift2021.json", "SantasGift2022.json", "SantasBigGift2022.json",
-    "SantasMegaGift2022.json", "SantasGift2023.json", "SantasBigGift2023.json",
-    "SantasMegaGift2023.json", "SantasGift2024.json", "SantasMegaGift2024.json"
-]
+# Directory where container JSON files are stored
+CONTAINER_FOLDER = "containers"
 
+# Load all container data dynamically
 container_data = {}
-for filename in container_files:
-    with open(filename, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        container_data[data["nickname"].lower()] = data  # Store by lowercase nickname for easy lookup
+
+for filename in os.listdir(CONTAINER_FOLDER):
+    if filename.endswith(".json"):  # Only process JSON files
+        file_path = os.path.join(CONTAINER_FOLDER, filename)
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            container_data[data["nickname"].lower()] = data  # Store by lowercase nickname for easy lookup
 
 # Bot Ready Event
 @bot.event
