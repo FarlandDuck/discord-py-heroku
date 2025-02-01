@@ -45,8 +45,8 @@ async def custom_help(ctx):
         description="Here are the available commands for the bot:",
         color=discord.Color.blue()
     )
-    embed.add_field(name="`!collection [total] [owned] [dupes] [cost]`", value="Simulates the number of containers needed to complete a collection.", inline=False)
-    embed.add_field(name="`!open [container_name]`", value="Opens a container and gives a random drop.", inline=False)
+    embed.add_field(name="`!collection [total items] [owned items] [owned duplicates] [duplicate to item conversion cost]`", value="Simulates the number of containers needed to complete a collection.", inline=False)
+    embed.add_field(name="`!open [container name]`", value="Opens a container and gives a random drop.", inline=False)
     embed.add_field(name="`!info`", value="Lists all available containers.", inline=False)
     embed.add_field(name="`!help`", value="Displays this help message.", inline=False)
 
@@ -59,7 +59,7 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
 
     # If no arguments provided, show usage instruction
     if n is None or k is None or d is None or c is None:
-        await ctx.send("Usage: `!collection [total_items] [owned_items] [duplicates] [conversion_cost]`")
+        await ctx.send("Usage: `!collection [total items] [owned items] [owned duplicates] [duplicate to item conversion cost]`")
         return
     
     if n > 100 or n <= 0 or k > n or k < 0 or d < 0 or c <= 0:
@@ -95,9 +95,9 @@ async def collection(ctx, n: int = None, k: int = None, d: int = None, c: int = 
     # Generate the plot
     plt.figure(figsize=(10, 5))
     plt.plot(percentiles, results, label="Number of Containers Needed", color='b')
-    plt.xlabel("Percentile of Players")
+    plt.xlabel("Percent of Players that Will Complete the Collection")
     plt.ylabel("Number of Containers Opened")
-    plt.title("Containers Needed to Complete a Collection by Percentile")
+    plt.title("Containers Needed to Complete the Collection by Percentile")
     plt.grid(True)
     plt.legend()
 
@@ -127,7 +127,7 @@ async def open_container(ctx, *, container_name: str = None):
 
     # If no container name is provided
     if container_name is None:
-        await ctx.send("Usage: `!open [container_name]`\nUse `!info` to see available containers.")
+        await ctx.send("Usage: `!open [container name]`\nUse `!info` to see available containers.")
         return
 
     # Find best matching container name
