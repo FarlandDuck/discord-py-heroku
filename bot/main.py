@@ -7,6 +7,7 @@ import io
 from discord.ext import commands
 import matplotlib.pyplot as plt
 import numpy as np
+from datetime import datetime
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -184,6 +185,10 @@ async def open_container(ctx, *, container_name: str = None):
     embed.description = selected_drop["name"]
     if "link" in selected_drop:
         embed.set_image(url=selected_drop["link"])
+
+    # Log the opening event to the console
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{timestamp}] {ctx.author} opened '{container['nickname']}' and received '{selected_drop['name']}'.")
 
     await ctx.send(embed=embed)
 
