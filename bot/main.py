@@ -34,7 +34,8 @@ for filename in os.listdir(CONTAINER_FOLDER):
 # Bot Ready Event
 @bot.event
 async def on_ready():
-    print(f'{bot.user.name} has connected to Discord!')
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f'[{timestamp}] {bot.user.name} has connected to Discord!')
 
 # Custom Help Command
 @bot.command(name="help")
