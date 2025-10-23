@@ -1,6 +1,6 @@
 {
   "name":"Santa's Mega Gift 2024 Container",
-  "nickname": "mega",
+  "nickname": "mega24",
   "color":"0xE1E5EF",
   "drops":[
     {
@@ -216,16 +216,8 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215952516005978/Toulon.png"
             },
             {
-              "name":"Tsurugi",
-              "link":"https://wiki.wgcdn.co/images/2/29/Ship_PJSB549_Tsurugi.png"
-            },
-            {
               "name":"Weimar",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319781552599050/Weimar.png"
-            },
-            {
-              "name":"West Virginia '41",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319781066051664/W.Virginia1941.png"
             },
             {
               "name":"West Virginia '44",
@@ -412,6 +404,10 @@
             {
               "name":"Tone",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321977744703548/Tone.png"
+            },
+            {
+              "name":"Tsurugi",
+              "link":"https://wiki.wgcdn.co/images/2/29/Ship_PJSB549_Tsurugi.png"
             },
             {
               "name":"Tulsa",

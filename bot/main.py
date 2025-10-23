@@ -136,6 +136,33 @@ async def info(ctx):
     """Lists available containers."""
     await ctx.send(f"Use `!open [container name]`. Available containers: {', '.join(sorted(container_data.keys()))}")
 
+def process_drop_pool(drop_pool):
+    """
+    Recursively processes a drop pool and returns the final selected item.
+    """
+    roll = random.uniform(0, 100)
+    
+    # Check if drop pool uses custom rates
+    if "rate" in drop_pool[0]:
+        cumulative_rate = 0
+        selected_drop = None
+        for drop in drop_pool:
+            cumulative_rate += drop["rate"]
+            if roll <= cumulative_rate:
+                selected_drop = drop
+                break
+        if selected_drop is None:  # Fallback in case of rounding errors
+            selected_drop = drop_pool[-1]
+    else:
+        # Even distribution
+        selected_drop = random.choice(drop_pool)
+    
+    # If the selected drop has sub-drops (nested pool), continue traversal
+    if "drops" in selected_drop:
+        return process_drop_pool(selected_drop["drops"])
+    else:
+        return selected_drop
+
 # Command: Open Container
 @bot.command(name="open")
 async def open_container(ctx, *, container_name: str = None):
@@ -157,39 +184,41 @@ async def open_container(ctx, *, container_name: str = None):
     # Embed for Discord message
     embed = discord.Embed(title=container["name"], color=discord.Color.from_str(container["color"]))
 
-    drop_pool = container["drops"]  # Initial drop pool
-    roll = random.uniform(0, 100)  # Generate a random roll
-    last_rate = 100  # Used to track probability distribution
-
-    # Traverse drop pools properly
-    while True:
-        # Check if drop pool uses custom rates
-        if "rate" in drop_pool[0]:
-            cumulative_rate = 0
-            for i, drop in enumerate(drop_pool):
-                cumulative_rate += drop["rate"]
-                if roll <= cumulative_rate:  # Select the correct drop
-                    selected_drop = drop
-                    break
-        else:
-            # Even distribution
-            selected_drop = random.choice(drop_pool)
-
-        # If the selected drop has sub-drops (nested pool), continue traversal
-        if "drops" in selected_drop:
-            drop_pool = selected_drop["drops"]
-            roll = random.uniform(0, 100)  # Re-roll for next layer
-        else:
-            break  # We've reached the final item
-
-    # Embed the result
-    embed.description = selected_drop["name"]
-    if "link" in selected_drop:
-        embed.set_image(url=selected_drop["link"])
-
-    # Log the opening event to the console
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}] {ctx.author} opened '{container['nickname']}' and received '{selected_drop['name']}'.")
+    # Check if container uses the new "slots" structure or legacy "drops" structure
+    if "slots" in container:
+        # Multi-slot container
+        all_drops = []
+        
+        for slot_index, slot in enumerate(container["slots"]):
+            selected_drop = process_drop_pool(slot["drops"])
+            all_drops.append(selected_drop)
+        
+        # First slot gets the image embed, rest are text
+        if all_drops:
+            # Set description with all drop names
+            drop_names = [drop["name"] for drop in all_drops]
+            embed.description = ", ".join(drop_names)
+            
+            # Set image from first slot if available
+            if "link" in all_drops[0] and all_drops[0]["link"]:
+                embed.set_image(url=all_drops[0]["link"])
+        
+        # Log the opening event
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        drops_str = ", ".join([drop["name"] for drop in all_drops])
+        print(f"[{timestamp}] {ctx.author} opened '{container['nickname']}' and received '{drops_str}'.")
+        
+    else:
+        # Legacy single-slot container
+        selected_drop = process_drop_pool(container["drops"])
+        
+        embed.description = selected_drop["name"]
+        if "link" in selected_drop and selected_drop["link"]:
+            embed.set_image(url=selected_drop["link"])
+        
+        # Log the opening event
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{timestamp}] {ctx.author} opened '{container['nickname']}' and received '{selected_drop['name']}'.")
 
     await ctx.send(embed=embed)
 

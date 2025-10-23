@@ -1,23 +1,23 @@
 {
-  "name":"Santa's Gift 2024 Container",
-  "nickname": "gift24",
-  "color":"0x2DB0BC",
+  "name":"Santa's Mega Gift 2025 Container",
+  "nickname": "mega",
+  "color":"0xE1E5EF",
   "drops":[
     {
       "name":"Premium Ship",
-      "rate":2.5,
+      "rate":16,
       "drops":[
         {
-          "name":"Tier V-VIII Ship",
-          "rate":80,
+          "name":"Pool 3",
+          "rate":75,
           "drops":[
             {
               "name":"Admiral Makarov",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922314819217010698/AdmiralMakarov.png"
             },
             {
-              "name":"Agincourt",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922314819447685121/Agincourt.png"
+              "name":"Arkhangelsk",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PRSB717_7a564bb4e1c08b8c22ed9304f1244a88941bd6a07ab6c257549f786b31f893fa.png"
             },
             {
               "name":"Ashitaka",
@@ -46,10 +46,6 @@
             {
               "name":"Duca degli Abruzzi",
               "link":"https://media.discordapp.net/attachments/922286460068061194/922317417823232060/DucadegliAbruzzi.png"
-            },
-            {
-              "name":"Dunkerque",
-              "link":"https://media.discordapp.net/attachments/922286460068061194/922317418322346014/Dunkerque.png"
             },
             {
               "name":"Elli",
@@ -88,10 +84,6 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922318086315606096/Hood.png"
             },
             {
-              "name":"Huron",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215877094023248/Huron.png"
-            },
-            {
               "name":"Hyūga",
               "link":"https://media.discordapp.net/attachments/922286460068061194/922318087028604968/Hyuga.png"
             },
@@ -108,16 +100,8 @@
               "link":"https://wiki.wgcdn.co/images/9/9f/Ship_PBSD717_Jupiter_1942.png"
             },
             {
-              "name":"Karl von Schönberg",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215885755269170/Karl_von_Schonberg.png"
-            },
-            {
               "name":"Krasny Krym",
               "link":"https://media.discordapp.net/attachments/922286460068061194/922318088551149608/KrasnyKrym.png"
-            },
-            {
-              "name":"Leipzig",
-              "link":"https://wiki.wgcdn.co/images/thumb/e/e1/Ship_PGSC516_Leipzig.png/160px-Ship_PGSC516_Leipzig.png"
             },
             {
               "name":"Leningrad",
@@ -130,14 +114,6 @@
             {
               "name":"Maya",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054215892730380349/Maya.png"
-            },
-            {
-              "name":"Mikoyan",
-              "link":"https://media.discordapp.net/attachments/922286460068061194/922318789058650173/Mikoyan.png"
-            },
-            {
-              "name":"Molotov",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922318789314510918/Molotov.png"
             },
             {
               "name":"Monaghan",
@@ -172,10 +148,6 @@
               "link":"https://wiki.wgcdn.co/images/9/9f/Ship_PBSD717_Jupiter_1942.png"
             },
             {
-              "name":"Perth",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319354861858876/Perth.png"
-            },
-            {
               "name":"Picardie",
               "link":"https://wiki.wgcdn.co/images/9/95/Ship_PFSB548_Picardie.png"
             },
@@ -192,16 +164,20 @@
               "link":"https://wiki.wgcdn.co/images/9/90/Ship_PBSB717_Rodney.png"
             },
             {
+              "name":"Royal Sovereign",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PBSB737_c029703cf694401f95fe651aae6da74124149d953fe9e5c6d5413ecca2140a6f.png"
+            },
+            {
               "name":"Scharnhorst",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319355943997460/Scharnhorst.png"
             },
             {
-              "name":"Siroco",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319780093001728/Siroco.png"
-            },
-            {
               "name":"Strasbourg",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319780323680317/Strasbourg.png"
+            },
+            {
+              "name":"Tashkent '39",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1334958515747553400/160px-Ship_PRSD517_Tashkent_1939.png?ex=679e6c80&is=679d1b00&hm=40e221e2cb3d39568a407dac3a8f211540888d0ba896effbfe4ad881cbb8d5d0&"
             },
             {
               "name":"Theseus",
@@ -220,26 +196,18 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319781552599050/Weimar.png"
             },
             {
-              "name":"West Virginia '44",
-              "link":"https://wiki.wgcdn.co/images/thumb/6/6b/Ship_PASB527_West_Virginia_1944.png/160px-Ship_PASB527_West_Virginia_1944.png"
-            },
-            {
               "name":"Xin Zhong Guo 14",
               "link":"https://wiki.wgcdn.co/images/1/19/Ship_PZSS716_Xin_Zhong_Guo_14.png"
             },
             {
               "name":"Yukon",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320235640524821/Yukon.png"
-            },
-            {
-              "name":"Yūdachi",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922319781921689681/Yudachi.png"
             }
           ]
         },
         {
-          "name":"Tier VIII-IX Ship",
-          "rate":16,
+          "name":"Pool 2",
+          "rate":18.75,
           "drops":[
             {
               "name":"Ägir",
@@ -262,12 +230,12 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219651179094037/Aquila.png"
             },
             {
-              "name":"Atago",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320626931339265/Atago.png"
-            },
-            {
               "name":"Borodino",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922320625559826472/Borodino.png"
+            },
+            {
+              "name":"Cambridge",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PASC719_3e2c1d32c556a25cc79eff78cf1f5253c7c69477e7658c92f248b5693e392cf9.png"
             },
             {
               "name":"Carnot",
@@ -294,8 +262,16 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219623584772096/Dalian.png"
             },
             {
+              "name":"Eskimo",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PBSD718_7eeaf090fa2bcb92ba692af47ae4587dada80b31172c2d6706cd3631432a74c4.png"
+            },
+            {
               "name":"Fenyang",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321132248510484/Fenyang.png"
+            },
+            {
+              "name":"Ferrante Gonzaga",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PISC719_1b3caf320e6e4718e7016e939c7d5d66ea74ee2e2845366c4145118d93ecbbfc.png"
             },
             {
               "name":"Flandre",
@@ -338,6 +314,10 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321521471528960/Kidd.png"
             },
             {
+              "name":"Kozma Minin",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PRSC719_0df881c0e87b102a582a6a20f94e2ab35c9f2884b040f0b408511755dfbbcf05.png"
+            },
+            {
               "name":"Minegumo",
               "link":"https://wiki.wgcdn.co/images/2/27/Ship_PJSD719_Minegumo.png"
             },
@@ -362,12 +342,12 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321523279294514/Orkan.png"
             },
             {
-              "name":"Pyotr Bagration",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321976054411364/PyotrBagration.png"
+              "name":"Provorny",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PRSD718_2b38204202270c29ddcf9447bb0aada9934e26de653c6fdaee5413eab5b00b5b.png"
             },
             {
-              "name":"Rochester",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054219564457656381/Rochester.png"
+              "name":"Pyotr Bagration",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922321976054411364/PyotrBagration.png"
             },
             {
               "name":"S-189",
@@ -388,6 +368,10 @@
             {
               "name":"Sun Yat-Sen",
               "link":"https://wiki.wgcdn.co/images/thumb/b/b9/Ship_PZSB529_Sun_Yat_Sen.png/160px-Ship_PZSB529_Sun_Yat_Sen.png"
+            },
+            {
+              "name":"Suzuya",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PJSC739_9035eb9a2b0ffe19805310981634d5ff5df0ac10903a1fd2fbe0815df5c915c4.png"
             },
             {
               "name":"Tianjin",
@@ -440,8 +424,8 @@
           ]
         },
         {
-          "name":"Tier X Ship or a Rare Ship",
-          "rate":4,
+          "name":"Pool 1",
+          "rate":6.25,
           "drops":[
             {
               "name":"Admiral Graf Spee",
@@ -470,10 +454,6 @@
             {
               "name":"Benham",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922322637974274048/Benham.png"
-            },
-            {
-              "name":"Brisbane",
-              "link":"https://wiki.wgcdn.co/images/thumb/5/54/Ship_PUSC510_Brisbane.png/160px-Ship_PUSC510_Brisbane.png"
             },
             {
               "name":"Colossus",
@@ -516,8 +496,16 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323019282649158/Haida.png"
             },
             {
+              "name":"Hildebrand",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PGSC710_873ea04ace1a1c30e69973ee6f51a160231045db0b81b6c00bf253ec27a42a45.png"
+            },
+            {
               "name":"Hizen",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225246447730748/Hizen.png"
+            },
+            {
+              "name":"Incheon",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PZSC710_ebae003daaa4c0f5dc193e54c0bd3fb954d53e12e52d8063bc8c1447546252a1.png"
             },
             {
               "name":"Jean Bart",
@@ -540,12 +528,12 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323019886645298/Kronshtadt.png"
             },
             {
-              "name":"Lenin",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323020058595338/Lenin.png"
+              "name":"La Pampa",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PVSD710_4fbde24adc5a626d5e892092ae3d06318cf5bb0092919b902e880856eebeb425.png"
             },
             {
-              "name":"Malta",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1054225216252936312/Malta.png"
+              "name":"Lenin",
+              "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323020058595338/Lenin.png"
             },
             {
               "name":"Massachusetts",
@@ -558,6 +546,10 @@
             {
               "name":"Missouri",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323020981370930/Missouri.png"
+            },
+            {
+              "name":"Monmouth",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PBSC020_0761d252b6e02c54d5818fd782ad8c924b21411528738d94bd68312df310b298.png"
             },
             {
               "name":"Musashi",
@@ -576,6 +568,10 @@
               "link":"https://wiki.wgcdn.co/images/d/d2/Ship_PASB720_Rhode_Island.png"
             },
             {
+              "name":"Sibir",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PRSB710_d366f737c0d79517eb9885dd70ebd3b805b9bbcdb9cda98b8f2d47d74544ecab.png"
+            },
+            {
               "name":"Smolensk",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323381905403994/Smolensk.png"
             },
@@ -588,16 +584,12 @@
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323382131908669/T-61.png"
             },
             {
-              "name":"Tashkent '39",
-              "link":"https://cdn.discordapp.com/attachments/922286460068061194/1334958515747553400/160px-Ship_PRSD517_Tashkent_1939.png?ex=679e6c80&is=679d1b00&hm=40e221e2cb3d39568a407dac3a8f211540888d0ba896effbfe4ad881cbb8d5d0&"
+              "name":"Taihang",
+              "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PZSB709_050b490260430869c3ea55ade254be302813ffaed32320e6231d89e1e4289a00.png"
             },
             {
               "name":"Thunderer",
               "link":"https://cdn.discordapp.com/attachments/922286460068061194/922323379816656946/Thunderer.png"
-            },
-            {
-              "name":"Tromp",
-              "link":"https://wiki.wgcdn.co/images/thumb/8/88/Ship_PHSD610_Tromp.png/160px-Ship_PHSD610_Tromp.png"
             },
             {
               "name":"Z-39",
@@ -609,7 +601,7 @@
     },
     {
       "name":"Golden Gift",
-      "rate":1,
+      "rate":10,
       "drops":[
         {
           "name":"Premium Ship",
@@ -620,34 +612,38 @@
               "rate":0.01,
               "drops":[
                 {
-                  "name":"Georg Hoffmann Golden",
-                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PGSD720_29e4cfb43b457583e51e713a1eea9e9d430755f21b6534fe5a58015ed78f828f.png"
+                  "name":"Aki Golden",
+                  "link":"https://media.discordapp.net/attachments/922286460068061194/1431060915729596547/PJSB720_79ba02354cc52b8d873f383b53e7fe2e11487402ab1d3a1b29593dfa733f87e7.png?ex=68fc0ad6&is=68fab956&hm=095ff6948dbd7fbe4e26ba5ebc7592aa8fe7513936a0a73ed4eb10e1132152eb&=&format=webp&quality=lossless"
                 },
                 {
-                  "name":"Prins Van Oranje Golden",
-                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PHSC720_a959a75ef627938b55ca6b74f5252570f6d1d207ae032add0f4552b581757674.png"
+                  "name":"Bremen Golden",
+                  "link":"https://media.discordapp.net/attachments/922286460068061194/1431060915729596547/PJSB720_79ba02354cc52b8d873f383b53e7fe2e11487402ab1d3a1b29593dfa733f87e7.png?ex=68fc0ad6&is=68fab956&hm=095ff6948dbd7fbe4e26ba5ebc7592aa8fe7513936a0a73ed4eb10e1132152eb&=&format=webp&quality=lossless"
                 },
                 {
-                  "name":"Chikuma II Golden",
-                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PJSC729_ca6899ec10b25a6eceaed4214d0cfda9718c681475fc37632b81e73a1c27662c.png"
+                  "name":"Hawaii Golden",
+                  "link":"https://media.discordapp.net/attachments/922286460068061194/1431060915729596547/PJSB720_79ba02354cc52b8d873f383b53e7fe2e11487402ab1d3a1b29593dfa733f87e7.png?ex=68fc0ad6&is=68fab956&hm=095ff6948dbd7fbe4e26ba5ebc7592aa8fe7513936a0a73ed4eb10e1132152eb&=&format=webp&quality=lossless"
+                },
+                {
+                  "name":"Roma Aeterna",
+                  "link":"https://media.discordapp.net/attachments/922286460068061194/1431060915729596547/PJSB720_79ba02354cc52b8d873f383b53e7fe2e11487402ab1d3a1b29593dfa733f87e7.png?ex=68fc0ad6&is=68fab956&hm=095ff6948dbd7fbe4e26ba5ebc7592aa8fe7513936a0a73ed4eb10e1132152eb&=&format=webp&quality=lossless"
                 }
               ]
             },
             {
-              "name":"Tier IX-X Ship",
+              "name":"Tier X Ship",
               "rate":99.99,
               "drops":[
                 {
-                  "name":"Georg Hoffmann",
-                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PGSD710_cb089f4ad47ef4b414391ab1f40e39944478f3b2bb022ab1a2aef6a795064420.png"
+                  "name":"Aki",
+                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PJSB720_db6e741b5408e4fc0d005a5398981797a986ccffaa561da268c2d51726960d4b.png"
                 },
                 {
-                  "name":"Prins Van Oranje",
-                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PHSC710_f898a04d90a69361c52bfd1e80edc84ac8823f5e1f788cc5fba28fdeeb35ed8d.png"
+                  "name":"Bremen",
+                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PGSC720_26b0237aae080459c65038fc6ae4334b2629e8df90a61a7e527ec2a2bd7521ab.png"
                 },
                 {
-                  "name":"Chikuma II",
-                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/small/PJSC719_fcc26622a72e18aa0cec62f2123ea196be1f875637f27649f2f9fc55cfb7455f.png"
+                  "name":"Hawaii",
+                  "link":"https://wows-gloss-icons.wgcdn.co/icons/vehicle/medium/PASC720_9788c45ec7c964fe370f372ac5569e0f3c6159e80b2af4907b1326e788e0fac6.png"
                 }
               ]
             }
@@ -688,106 +684,66 @@
       ]
     },
     {
-      "name":"30 Days of Warships Premium Account",
+      "name":"180 Days of Warships Premium Account",
       "rate":1,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/wows-premium-30.png"
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/wows-premium-180.png"
     },
     {
-      "name":"3x Blue Bonus",
-      "rate":10,
+      "name":"7x Red Bonus",
+      "rate":8,
       "drops":[
         {
-          "name":"3x Credits +160%",
+          "name":"7x Credits +320%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA014_CRboost_4_99713a7e8b4ee65ff3af43c723bfa91b44d211b3a4c6a3ac690575665f06badd.png"
+        },
+        {
+          "name":"7x Ship XP +1,600%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA024_TotalXPboost_4_b8739fca597f277a2884259dc454d20af244471e408db62824fca8820e82f4ed.png"
+        },
+        {
+          "name":"7x Commander XP +1,600%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA034_CrewXPboost_4_30a354b2e39c4fa8b10731337af1b84314c95d4e702e0738afb0d42c03a192b6.png"
+        },
+        {
+          "name":"7x Free XP +7,200%",
+          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA044_FreeXPboost_4_60fd3229a1453944ff3844110339dd943c38c3bf27c271119b69cc18f9af7528.png"
+        }
+      ]
+    },
+    {
+      "name":"12,500 Coal",
+      "rate":8,
+      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
+    },
+    {
+      "name":"20x Blue Bonus",
+      "rate":32,
+      "drops":[
+        {
+          "name":"20x Credits +160%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA013_CRboost_3_09342a70cb2a912c0ea82369e6eccf76c099f4fa3f544eb11f47319b3dc7c84a.png"
         },
         {
-          "name":"3x Ship XP +800%",
+          "name":"20x Ship XP +800%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA023_TotalXPboost_3_2f2a17855078bbb1b9162d4c6980d151c4ce691f7e1c7e6273e303cce8181ea5.png"
         },
         {
-          "name":"3x Commander XP +800%",
+          "name":"20x Commander XP +800%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA033_CrewXPboost_3_7a064a7f0191e0e2c7381d268c8b4c7e9911616584b05919a56932b1d9341dd8.png"
         },
         {
-          "name":"3x Free XP +2,400%",
+          "name":"20x Free XP +2,400%",
           "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA043_FreeXPboost_3_a8aa92b232c91f8c4ac9cec3a5bbc518d10e58a77f1a848691bcc42e04da6f6c.png"
         }
       ]
     },
     {
-      "name":"25x Signals",
-      "rate":24,
-      "drops":[
-        {
-          "name":"25x India Delta",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF007_ID_SignalFlag_f2d2d5a7ad5d5bd69899a37bd889f314f0ed741b6bc48c16309c5ad795615a45.png"
-        },
-        {
-          "name":"25x Sierra Mike",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF005_SM_SignalFlag_6fdc0ca534fd12fc95a2debe29337890ca2235265408da3790ec2d168e6d222d.png"
-        },
-        {
-          "name":"25x Victor Lima",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF017_VL_SignalFlag_5a5c62c1d89de8bd630b73d6ea215c2a1b0bc73d4c178a6a865abef862fbf0ca.png"
-        },
-        {
-          "name":"25x India X-Ray",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF018_IX_SignalFlag_b4d5136e9f723e02db21d4c2af56df64e8dc5f0d95ce1f771db081962aa55f56.png"
-        },
-        {
-          "name":"25x X-Ray Papa Unaone",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF028_Smoke_SignalFlag_a0f9fc9f8c92666289dbad904cd86eb73c08734640f728d94433c273420e663b.png"
-        },
-        {
-          "name":"25x Sierra Bravo",
-          "link":"https://glossary-wows-global.gcdn.co/icons/flags/PCEF029_Sonar_AirDef_SignalFlag_7c9209a0d26ccb6c181b11fa0f7321dacf522b2ce7e0e5b451dd6d2a939eba18.png"
-        }
-      ]
-    },
-    {
-      "name":"500 Doubloons",
-      "rate":5,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/doubloons-1.png"
-    },
-    {
-      "name":"Port Slot",
-      "rate":5.5,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/slots.png"
-    },
-    {
-      "name":"12x Green Bonus",
-      "rate":24,
-      "drops":[
-        {
-          "name":"12x Credits +40%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA012_CRboost_2_adcb20408f009b810024124af7ea4b190710e8139f5bc55a82dca46764ee88b0.png"
-        },
-        {
-          "name":"12x Ship XP +200%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA022_TotalXPboost_2_e1fd63bedd9ba117c983ec368f92aa8d908dfa7ef6b5524f762c07dab56195ed.png"
-        },
-        {
-          "name":"12x Commander XP +200%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA032_CrewXPboost_2_aeb94ab6609d166787ff9462a21a2469f8aa7b14a0900df5b89aa893f933d591.png"
-        },
-        {
-          "name":"12x Free XP +600%",
-          "link":"https://wows-gloss-icons.wgcdn.co/icons/camoboost/PCEA042_FreeXPboost_2_892c176597652a2095fd4b214f540e6ca98f37c90666e70edaa81b25d1c42855.png"
-        }
-      ]
-    },
-    {
-      "name":"2,500 Coal",
-      "rate":7,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
-    },
-    {
-      "name":"20,000 Elite Commander XP",
+      "name":"100,000 Elite Commander XP",
       "rate":10,
       "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/elite-xp.png"
     },
     {
-      "name":"400,000 Credits",
+      "name":"2,250,000 Credits",
       "rate":10,
       "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/credits-48000.png"
     }
