@@ -184,6 +184,10 @@ async def open_container(ctx, *, container_name: str = None):
     # Embed for Discord message
     embed = discord.Embed(title=container["name"], color=discord.Color.from_str(container["color"]))
 
+    # Set container thumbnail if available
+    if "image" in container and container["image"]:
+        embed.set_thumbnail(url=container["image"])
+
     # Check if container uses the new "slots" structure or legacy "drops" structure
     if "slots" in container:
         # Multi-slot container

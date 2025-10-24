@@ -1,6 +1,7 @@
 {
   "name":"Santa's Mega Gift 2024 Container",
   "nickname": "mega24",
+  "image": "https://wows-gloss-icons.wgcdn.co/icons/reward_icons/PCL008_SantaBig_4dc36bbe5346c25107806767c076361563aac1d62cdd0fddfbcf5654a7c31752.png",
   "color":"0xE1E5EF",
   "drops":[
     {
@@ -722,7 +723,7 @@
     {
       "name":"12,500 Coal",
       "rate":8,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
+      "link":"https://wows-wowsp-global.gcdn.co/media/ceph-image/947bf9f2-0d5a-11ef-930d-b49691e6ead0.png"
     },
     {
       "name":"20x Blue Bonus",

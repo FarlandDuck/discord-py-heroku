@@ -1,6 +1,7 @@
 {
     "name":"Santa's Gift 2023 Container",
     "nickname": "gift23",
+    "image": "https://wows-gloss-icons.wgcdn.co/icons/reward_icons/PCL006_SantaSmall_35073f8cdab2afea8d895ceac5b65c1dab8f0940aebb85cd83a8d877eb199692.png",
     "color":"0xD42322",
     "drops":[
       {

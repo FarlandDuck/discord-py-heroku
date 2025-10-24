@@ -1,6 +1,7 @@
 {
   "name":"Santa's Gift 2022 Container",
   "nickname": "gift22",
+  "image": "https://armory-wows-global.gcdn.co/armory_images/armory/images/01011_1_SantaSmall_Container.ce723a0d39795aa9bf7a793765ff178b.png",
   "color":"0x9AB574",
   "drops":[
     {

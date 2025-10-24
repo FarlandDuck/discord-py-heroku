@@ -1,6 +1,7 @@
 {
   "name":"Santa's Gift 2021 Container",
   "nickname": "gift21",
+  "image": "https://i.imgur.com/uNbXlyq.png",
   "color":"0xFCEEC2",
   "drops":[
     {
@@ -571,7 +572,7 @@
     {
       "name":"2,500 Coal",
       "rate":7,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
+      "link":"https://wows-wowsp-global.gcdn.co/media/ceph-image/947bf9f2-0d5a-11ef-930d-b49691e6ead0.png"
     },
     {
       "name":"30 Days of Warships Premium Account",

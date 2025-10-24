@@ -1,6 +1,7 @@
 {
   "name":"Santa's Gift 2024 Container",
   "nickname": "gift24",
+  "image": "https://wows-gloss-icons.wgcdn.co/icons/reward_icons/PCL235_SantaSmall_Prem_08b91f730b7cc672a7a899dd02613ae9eda7b642f530a941b1c5d1ada6f7b6d2.png",
   "color":"0x2DB0BC",
   "drops":[
     {
@@ -779,7 +780,7 @@
     {
       "name":"2,500 Coal",
       "rate":7,
-      "link":"https://wows-web-static.wgcdn.co/wowsp/eb2b3404/redesign/coal.png"
+      "link":"https://wows-wowsp-global.gcdn.co/media/ceph-image/947bf9f2-0d5a-11ef-930d-b49691e6ead0.png"
     },
     {
       "name":"20,000 Elite Commander XP",
