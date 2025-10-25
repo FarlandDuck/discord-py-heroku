@@ -1,6 +1,7 @@
 {
   "name":"Supercontainer",
   "nickname": "super",
+  "image": "https://wows-gloss-icons.wgcdn.co/icons/reward_icons/PCL005_Epic_ff759cae80769e9496bc6a232b30d1f6c7ddf99f8b8297c4cdb8ccecfa66742a.png",
   "color":"0xB95E51",
   "drops":[
     {
